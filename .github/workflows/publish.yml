@@ -18,4 +18,4 @@ jobs:
 
       - name: Build java project and containerise
         run: |
-          mvn clean package jib:build -Djib.to.tags=dev
+          mvn clean package -B jib:build -Djib.to.tags=dev

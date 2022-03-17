@@ -104,7 +104,7 @@
 						</platforms>
 					</from>
 					<to>
-						<image>registry.hub.docker.com/jfbourner/test</image>
+						<image>jfbourner/test</image>
 					</to>
 				</configuration>
 			</plugin>
