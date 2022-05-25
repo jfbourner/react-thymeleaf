@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: 'Development'
-      url: 'dev.jackbourner.co.uk'
+      url: 'https://dev.jackbourner.co.uk'
     steps:
       - name: 'Package Jar. Re-package layered Jar. Build Image. Push to GHE.'
         run: |
@@ -46,11 +46,12 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: 'Production'
-      url: 'jackbourner.co.uk'
+      url: 'https://jackbourner.co.uk'
     steps:
       - name: 'Tag image and build deployment'
         run: |
-          kubectl config view
+          kubectl version
+          ls -la
         env:
           IMAGE_TAG: prod
 
