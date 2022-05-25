@@ -37,8 +37,7 @@ jobs:
     steps:
       - name: 'Package Jar. Re-package layered Jar. Build Image. Push to GHE.'
         run: |
-            env
-            kubectl config view
+            ls -la
         env:
           IMAGE_TAG: dev
   job3:
@@ -51,7 +50,7 @@ jobs:
     steps:
       - name: 'Tag image and build deployment'
         run: |
-          env
+          kubectl config view
         env:
           IMAGE_TAG: prod
 
