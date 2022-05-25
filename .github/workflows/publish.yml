@@ -24,7 +24,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHE_CONTAINER_REPOSITORY }}x
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
           mvn clean package -B -ntp jib:build 
