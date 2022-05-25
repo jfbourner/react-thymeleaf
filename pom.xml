@@ -108,8 +108,11 @@
 						</platforms>
 					</from>
 					<to>
-						<image>ghcr.io/jfbourner/test:${project.version}</image>
-						<tags>${env.IMAGE_TAG}</tags>
+						<image>ghcr.io/jfbourner/${project.artifactId}</image>
+						<tags>
+							<tag>${env.IMAGE_TAG}</tag>
+							<tag>${project.version}</tag>
+						</tags>
 					</to>
 				</configuration>
 				<executions>
