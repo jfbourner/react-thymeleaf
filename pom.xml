@@ -14,7 +14,7 @@
 	<name>react-thymeleaf</name>
 	<description>CV website for Jack Bourner</description>
 	<properties>
-		<java.version>8</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -110,8 +110,8 @@
 					<to>
 						<image>ghcr.io/jfbourner/${project.artifactId}</image>
 						<tags>
-							<tag>${env.IMAGE_TAG}</tag>
 							<tag>${project.version}</tag>
+							<tag>${env.IMAGE_TAG}</tag>
 						</tags>
 					</to>
 				</configuration>

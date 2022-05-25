@@ -2,11 +2,8 @@ name: publish
 
 on: [push]
 
-env:
-  IMAGE_TAG: dev
-
 jobs:
-  build_and_publish_image:
+  job1:
     runs-on: ubuntu-latest
     name: Maven build + image build and publish
     steps:
@@ -27,5 +24,39 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
-          mvn clean package -B -ntp jib:build 
+          mvn clean package -B -ntp jib:build
+        env:
+          IMAGE_TAG: latest
+  job2:
+    needs: job1
+    name: Deploy to Dev
+    runs-on: ubuntu-latest
+    environment:
+      name: 'dev'
+      url: 'dev.jackbourner.co.uk'
+    steps:
+      - name: 'Package Jar. Re-package layered Jar. Build Image. Push to GHE.'
+        run: |
+            env
+            kubectl config view
+        env:
+          IMAGE_TAG: dev
+  job3:
+    needs: job2
+    name: Deploy to Prod
+    runs-on: ubuntu-latest
+    environment:
+      name: 'production'
+      url: 'jackbourner.co.uk'
+    steps:
+      - name: 'Tag image and build deployment'
+        run: |
+          env
+        env:
+          IMAGE_TAG: prod
 
+
+
+# Build the image
+# Update dev with the  latest image. Do I version the image and then update the deployment
+# If success then trigger the prod build and get approval
