@@ -24,14 +24,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
-          mvn clean package -B -ntp jib:build
+          ls -la
         env:
           IMAGE_TAG: latest
   job2:
+    needs: job1
     name: Deploy to Dev
     runs-on: ubuntu-latest
     environment:
-      name: 'dev'
+      name: 'Development'
       url: 'dev.jackbourner.co.uk'
     steps:
       - name: 'Package Jar. Re-package layered Jar. Build Image. Push to GHE.'
@@ -40,10 +41,11 @@ jobs:
         env:
           IMAGE_TAG: dev
   job3:
+    needs: job2
     name: Deploy to Prod
     runs-on: ubuntu-latest
     environment:
-      name: 'production'
+      name: 'Production'
       url: 'jackbourner.co.uk'
     steps:
       - name: 'Tag image and build deployment'
