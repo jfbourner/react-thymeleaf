@@ -109,6 +109,7 @@
 					</from>
 					<to>
 						<image>ghcr.io/jfbourner/test:${project.version}</image>
+						<tags>${env.IMAGE_TAG}</tags>
 					</to>
 				</configuration>
 				<executions>
