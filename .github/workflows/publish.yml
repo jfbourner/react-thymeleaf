@@ -28,7 +28,6 @@ jobs:
         env:
           IMAGE_TAG: latest
   job2:
-    needs: job1
     name: Deploy to Dev
     runs-on: ubuntu-latest
     environment:
@@ -41,7 +40,6 @@ jobs:
         env:
           IMAGE_TAG: dev
   job3:
-    needs: job2
     name: Deploy to Prod
     runs-on: ubuntu-latest
     environment:
