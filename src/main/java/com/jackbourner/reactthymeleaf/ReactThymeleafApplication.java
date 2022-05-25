@@ -9,5 +9,4 @@ public class ReactThymeleafApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ReactThymeleafApplication.class, args);
 	}
-
 }
