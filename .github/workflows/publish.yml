@@ -45,7 +45,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Development deployment'
         run: |
-          #docker tag ghcr.io/jfbourner/react-thymeleaf:latest ghcr.io/jfbourner/react-thymeleaf:$IMAGE_TAG
+          docker tag ghcr.io/jfbourner/react-thymeleaf:1.0.0 ghcr.io/jfbourner/react-thymeleaf:$IMAGE_TAG
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
@@ -76,7 +76,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Production deployment'
         run: |
-          #docker tag ghcr.io/jfbourner/react-thymeleaf:dev ghcr.io/jfbourner/react-thymeleaf:$IMAGE_TAG
+          docker tag ghcr.io/jfbourner/react-thymeleaf:dev ghcr.io/jfbourner/react-thymeleaf:$IMAGE_TAG
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
