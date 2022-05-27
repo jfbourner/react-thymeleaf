@@ -56,8 +56,8 @@ jobs:
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
-          kubectl config set-credentials github-user --client-key=private.key --client-certificate=github.crt --embed-certs=true
-          kubectl config set-context dev-context --cluster=dev --namespace=development --user=github-user
+          kubectl config set-credentials ghe --client-key=private.key --client-certificate=github.crt --embed-certs=true
+          kubectl config set-context dev-context --cluster=dev --namespace=development --user=ghe
           kubectl config use-context dev-context 
           mvn -B -ntp k8s:resource k8s:apply
         env:
