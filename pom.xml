@@ -197,7 +197,7 @@
 						</ingress>
 						<services>
 							<service>
-								<name>${project.name}-service</name>
+								<name>${project.name}</name>
 								<type>ClusterIP</type>
 								<ports>
 									<port>
