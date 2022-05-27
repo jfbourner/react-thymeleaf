@@ -59,7 +59,7 @@ jobs:
           kubectl config set-credentials github-user --client-key=private.key --client-certificate=github.crt --embed-certs=true
           kubectl config set-context dev-context --cluster=dev --namespace=development --user=github
           kubectl config use-context dev-context 
-          mvn k8s:resource k8s:apply
+          mvn -B -ntp k8s:resource k8s:apply
         env:
           env:
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
