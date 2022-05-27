@@ -199,7 +199,6 @@
 							<service>
 								<name>${project.name}-service</name>
 								<type>ClusterIP</type>
-								<headless>true</headless>
 								<ports>
 									<port>
 										<name>http</name>
