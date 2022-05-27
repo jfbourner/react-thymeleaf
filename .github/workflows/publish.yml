@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
-          mvn clean package -B -ntp jib:build
+          #mvn clean package -B -ntp jib:build
         env:
           IMAGE_TAG: latest
   job2:
@@ -57,7 +57,7 @@ jobs:
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
           kubectl config set-credentials github-user --client-key=private.key --client-certificate=github.crt --embed-certs=true
-          kubectl config set-context dev-context --cluster=dev --namespace=development --user=github-user
+          kubectl config set-context dev-context --cluster=dev --namespace=development --user=github
           kubectl config use-context dev-context 
           mvn k8s:resource k8s:apply
         env:
@@ -78,7 +78,7 @@ jobs:
         run: |
           Tag image with dev
           Login to kubenetes and set namespace to dev
-          mvn k8s:resource k8s:apply
+          mvn -B -ntp k8s:resource k8s:apply
         env:
           IMAGE_TAG: prod
           HOSTNAME: 'jackbourner.co.uk'
