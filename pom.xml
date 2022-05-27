@@ -16,12 +16,13 @@
 	<properties>
 		<java.version>19</java.version>
 		<service.port>8080</service.port>
-		<image.name>ghcr.io/jfbourner/${project.artifactId}</image.name>
+		<image.name>ghcr.io/jfbourner/${project.name}</image.name>
 		<host.name>${env.HOSTNAME}</host.name>
 		<namespace>${env.NAMESPACE}</namespace>
 		<image.tag>${env.IMAGE_TAG}</image.tag>
 		<jkube.createExternalUrls>true</jkube.createExternalUrls>
 		<jkube.skip.build>true</jkube.skip.build>
+		<jkube.enricher.jkube-image.pullPolicy>Always</jkube.enricher.jkube-image.pullPolicy>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -201,7 +202,7 @@
 								<headless>true</headless>
 								<ports>
 									<port>
-										<name>${project.name}-httpjack</name>
+										<name>http</name>
 										<protocol>tcp</protocol>
 										<port>${service.port}</port>
 										<targetPort>${service.port}</targetPort>
