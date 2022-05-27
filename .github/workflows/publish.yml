@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
-          ls -la
+          mvn clean package -B -ntp jib:build
         env:
           IMAGE_TAG: latest
   job2:
@@ -33,27 +33,40 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: 'Development'
-      url: 'https://dev.jackbourner.co.uk'
+      url: 'dev.jackbourner.co.uk'
     steps:
-      - name: 'Package Jar. Re-package layered Jar. Build Image. Push to GHE.'
+      - name: 'Development deployment'
         run: |
-            ls -la
+          mvn package jib:build 
+          echo $KUBERNETES_PK | base64 --decode > private.key
+          echo $KUBERNETES_CRT | base64 --decode > github.crt
+          kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
+          kubectl config set-credentials github-user --client-key=private.key --client-certificate=github.crt --embed-certs=true
+          kubectl config set-context dev-context --cluster=dev --namespace=development --user=github-user
+          kubectl config use-context dev-context 
+          mvn k8s:resource k8s:apply
         env:
-          IMAGE_TAG: dev
+          env:
+          KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
+          KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
+          IMAGE_TAG: 'dev'
+          HOSTNAME: 'dev.jackbourner.co.uk'
   job3:
     needs: job2
     name: Deploy to Prod
     runs-on: ubuntu-latest
     environment:
       name: 'Production'
-      url: 'https://jackbourner.co.uk'
+      url: 'jackbourner.co.uk'
     steps:
-      - name: 'Tag image and build deployment'
+      - name: 'Production deployment'
         run: |
-          kubectl version
-          ls -la
+          Tag image with dev
+          Login to kubenetes and set namespace to dev
+          mvn k8s:resource k8s:apply
         env:
           IMAGE_TAG: prod
+          HOSTNAME: 'jackbourner.co.uk'
 
 
 

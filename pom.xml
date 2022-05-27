@@ -10,11 +10,17 @@
 	</parent>
 	<groupId>com.jackbourner</groupId>
 	<artifactId>react-thymeleaf</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<name>react-thymeleaf</name>
 	<description>CV website for Jack Bourner</description>
 	<properties>
 		<java.version>19</java.version>
+		<service.port>8080</service.port>
+		<image.name>ghcr.io/jfbourner/${project.artifactId}</image.name>
+		<host.name>${env.HOSTNAME}</host.name>
+		<namespace>${env.NAMESPACE}</namespace>
+		<jkube.createExternalUrls>true</jkube.createExternalUrls>
+		<jkube.skip.build>true</jkube.skip.build>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -77,6 +83,11 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jkube</groupId>
+			<artifactId>kubernetes-maven-plugin</artifactId>
+			<version>1.8.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -108,10 +119,9 @@
 						</platforms>
 					</from>
 					<to>
-						<image>ghcr.io/jfbourner/${project.artifactId}</image>
+						<image>${image.name}</image>
 						<tags>
 							<tag>${project.version}</tag>
-							<tag>${env.IMAGE_TAG}</tag>
 						</tags>
 					</to>
 				</configuration>
@@ -137,7 +147,90 @@
 					<target>10</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.eclipse.jkube</groupId>
+				<artifactId>kubernetes-maven-plugin</artifactId>
+				<version>1.8.0</version>
+				<configuration>
+					<namespace>${namespace}</namespace>
+					<images>
+						<image>
+							<name>${image.name}:${tag}</name>
+						</image>
+					</images>
+					<enricher>
+						<config>
+							<jkube-healthcheck-spring-boot>
+								<timeoutSecounds>10</timeoutSecounds>
+								<readinessProbeInitialDelaySeconds>15</readinessProbeInitialDelaySeconds>
+								<livenessProbeInitialDelaySeconds>15</livenessProbeInitialDelaySeconds>
+							</jkube-healthcheck-spring-boot>
+						</config>
+					</enricher>
+					<resources>
+						<imagePullPolicy>Always</imagePullPolicy>
+						<ingress>
+							<ingressTlsConfigs>
+								<ingressTlsConfig>
+									<hosts>
+										<host>${host.name}</host>
+									</hosts>
+									<secretName>dev-tls</secretName>
+								</ingressTlsConfig>
+							</ingressTlsConfigs>
+							<ingressRules>
+								<ingressRule>
+									<host>${host.name}</host>
+									<paths>
+										<path>
+											<pathType>Prefix</pathType>
+											<path>/</path>
+											<serviceName>${project.name}</serviceName>
+											<servicePort>${service.port}</servicePort>
+										</path>
+									</paths>
+								</ingressRule>
+							</ingressRules>
+						</ingress>
+						<services>
+							<service>
+								<name>${project.name}-service</name>
+								<type>ClusterIP</type>
+								<headless>true</headless>
+								<ports>
+									<port>
+										<name>${project.name}-httpjack</name>
+										<protocol>tcp</protocol>
+										<port>${service.port}</port>
+										<targetPort>${service.port}</targetPort>
+									</port>
+								</ports>
+							</service>
+						</services>
+						<annotations>
+							<all>
+								<version>${project.version}</version>
+								<artifactId>${project.artifactId}</artifactId>
+							</all>
+						</annotations>
+					</resources>
+					<generator>
+						<excludes>
+							<exclude>spring-boot</exclude>
+						</excludes>
+					</generator>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<host.name>dev.jackbourner.co.uk</host.name>
+				<namespace>development</namespace>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
