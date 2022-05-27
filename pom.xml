@@ -19,6 +19,7 @@
 		<image.name>ghcr.io/jfbourner/${project.artifactId}</image.name>
 		<host.name>${env.HOSTNAME}</host.name>
 		<namespace>${env.NAMESPACE}</namespace>
+		<image.tag>${env.IMAGE_TAG}</image.tag>
 		<jkube.createExternalUrls>true</jkube.createExternalUrls>
 		<jkube.skip.build>true</jkube.skip.build>
 	</properties>
@@ -122,6 +123,7 @@
 						<image>${image.name}</image>
 						<tags>
 							<tag>${project.version}</tag>
+							<tag>${image.tag}</tag>
 						</tags>
 					</to>
 				</configuration>
@@ -155,7 +157,7 @@
 					<namespace>${namespace}</namespace>
 					<images>
 						<image>
-							<name>${image.name}:${tag}</name>
+							<name>${image.name}:${image.tag}</name>
 						</image>
 					</images>
 					<enricher>
@@ -229,6 +231,7 @@
 			<properties>
 				<host.name>dev.jackbourner.co.uk</host.name>
 				<namespace>development</namespace>
+				<image.tag>local</image.tag>
 			</properties>
 		</profile>
 	</profiles>
