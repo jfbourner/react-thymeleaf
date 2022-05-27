@@ -52,12 +52,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Development deployment'
         run: |
-          mvn package jib:build 
+          #mvn -DskipTests package jib:build 
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
           kubectl config set-credentials github-user --client-key=private.key --client-certificate=github.crt --embed-certs=true
-          kubectl config set-context dev-context --cluster=dev --namespace=development --user=github
+          kubectl config set-context dev-context --cluster=dev --namespace=development --user=github-user
           kubectl config use-context dev-context 
           mvn -B -ntp k8s:resource k8s:apply
         env:
