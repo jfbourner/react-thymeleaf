@@ -164,9 +164,9 @@
 					<enricher>
 						<config>
 							<jkube-healthcheck-spring-boot>
-								<timeoutSecounds>10</timeoutSecounds>
-								<readinessProbeInitialDelaySeconds>15</readinessProbeInitialDelaySeconds>
-								<livenessProbeInitialDelaySeconds>15</livenessProbeInitialDelaySeconds>
+								<timeoutSecounds>60</timeoutSecounds>
+								<readinessProbeInitialDelaySeconds>60</readinessProbeInitialDelaySeconds>
+								<livenessProbeInitialDelaySeconds>60</livenessProbeInitialDelaySeconds>
 							</jkube-healthcheck-spring-boot>
 						</config>
 					</enricher>
