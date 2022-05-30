@@ -1,0 +1,23 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-dev
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: ${host.name}
+      http:
+        paths:
+          - backend:
+              service:
+                name: ${project.name}
+                port:
+                  number: ${service.port}
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - ${host.name}
+      secretName: dev-tls
