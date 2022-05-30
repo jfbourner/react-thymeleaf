@@ -20,4 +20,4 @@ spec:
   tls:
     - hosts:
         - ${host.name}
-      secretName: dev-tls
+      secretName: ${ingress.secret}
