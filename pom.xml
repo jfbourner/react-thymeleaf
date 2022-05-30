@@ -20,6 +20,7 @@
 		<host.name>${env.HOSTNAME}</host.name>
 		<namespace>${env.NAMESPACE}</namespace>
 		<image.tag>${env.IMAGE_TAG}</image.tag>
+		<ingress.secret>${env.INGRESS_SECRET}</ingress.secret>
 		<jkube.createExternalUrls>true</jkube.createExternalUrls>
 		<jkube.skip.build>true</jkube.skip.build>
 		<jkube.enricher.jkube-image.pullPolicy>Always</jkube.enricher.jkube-image.pullPolicy>
@@ -178,7 +179,7 @@
 									<hosts>
 										<host>${host.name}</host>
 									</hosts>
-									<secretName>dev-tls</secretName>
+									<secretName>${ingress.secret}</secretName>
 								</ingressTlsConfig>
 							</ingressTlsConfigs>
 							<ingressRules>
@@ -232,6 +233,7 @@
 				<host.name>dev.jackbourner.co.uk</host.name>
 				<namespace>development</namespace>
 				<image.tag>local</image.tag>
+				<ingress.secret>dev-tls</ingress.secret>
 			</properties>
 		</profile>
 	</profiles>

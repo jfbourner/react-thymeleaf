@@ -56,6 +56,7 @@ jobs:
         env:
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
+          INGRESS_SECRET: dev-tls
           IMAGE_TAG: 'dev'
           HOSTNAME: 'dev.jackbourner.co.uk'
   job3:
@@ -87,5 +88,6 @@ jobs:
         env:
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
+          INGRESS_SECRET: echo-tls
           IMAGE_TAG: prod
           HOSTNAME: 'jackbourner.co.uk'
