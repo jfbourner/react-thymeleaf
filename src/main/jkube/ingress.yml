@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-dev
+    cert-manager.io/cluster-issuer: ${cluster.issuer}
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:

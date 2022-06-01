@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.13</version>
+		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jackbourner</groupId>
@@ -17,13 +17,14 @@
 		<java.version>19</java.version>
 		<service.port>8080</service.port>
 		<image.name>ghcr.io/jfbourner/${project.name}</image.name>
-		<host.name>${env.HOSTNAME}</host.name>
-		<namespace>${env.NAMESPACE}</namespace>
-		<image.tag>${env.IMAGE_TAG}</image.tag>
-		<ingress.secret>${env.INGRESS_SECRET}</ingress.secret>
 		<jkube.createExternalUrls>true</jkube.createExternalUrls>
 		<jkube.skip.build>true</jkube.skip.build>
 		<jkube.enricher.jkube-image.pullPolicy>Always</jkube.enricher.jkube-image.pullPolicy>
+		<cluster.issuer>local</cluster.issuer>
+		<namespace>local</namespace>
+		<image.tag>local</image.tag>
+		<ingress.secret>dev-tls</ingress.secret>
+		<host.name>localhost</host.name>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -228,12 +229,23 @@
 	</build>
 	<profiles>
 		<profile>
-			<id>local</id>
+			<id>dev</id>
 			<properties>
-				<host.name>dev.jackbourner.co.uk</host.name>
+				<cluster.issuer>letsencrypt-dev</cluster.issuer>
 				<namespace>development</namespace>
-				<image.tag>local</image.tag>
+				<image.tag>dev</image.tag>
 				<ingress.secret>dev-tls</ingress.secret>
+				<host.name>dev.jackbourner.co.uk</host.name>
+			</properties>
+		</profile>
+		<profile>
+			<id>prod</id>
+			<properties>
+				<cluster.issuer>letsencrypt-prod</cluster.issuer>
+				<namespace>production</namespace>
+				<image.tag>prod</image.tag>
+				<ingress.secret>echo-tls</ingress.secret>
+				<host.name>jackbourner.co.uk</host.name>
 			</properties>
 		</profile>
 	</profiles>
