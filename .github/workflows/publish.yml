@@ -45,14 +45,14 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Development deployment'
         run: |
-          mvn clean package -B -ntp jib:build
+          mvn clean package -B -ntp -P dev jib:build
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
           kubectl config set-credentials ghe --client-key=private.key --client-certificate=github.crt --embed-certs=true
           kubectl config set-context dev-context --cluster=dev --namespace=development --user=ghe
           kubectl config use-context dev-context 
-          mvn -B -ntp k8s:resource k8s:apply
+          mvn -B -ntp -P dev k8s:resource k8s:apply
         env:
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
@@ -77,14 +77,14 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Production deployment'
         run: |
-          mvn clean package -B -ntp jib:build
+          mvn clean package -B -ntp -P prod jib:build
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster prod --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
           kubectl config set-credentials ghe --client-key=private.key --client-certificate=github.crt --embed-certs=true
           kubectl config set-context prod-context --cluster=prod --namespace=production --user=ghe
           kubectl config use-context prod-context 
-          mvn -B -ntp k8s:resource k8s:apply
+          mvn -B -ntp -P prod k8s:resource k8s:apply
         env:
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
