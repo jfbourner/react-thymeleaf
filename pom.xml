@@ -19,7 +19,7 @@
 		<image.name>ghcr.io/jfbourner/${project.name}</image.name>
 		<jkube.createExternalUrls>true</jkube.createExternalUrls>
 		<jkube.skip.build>true</jkube.skip.build>
-		<jkube.enricher.jkube-image.pullPolicy>Always</jkube.enricher.jkube-image.pullPolicy>
+<!--		<jkube.enricher.jkube-image.pullPolicy>Always</jkube.enricher.jkube-image.pullPolicy>-->
 		<cluster.issuer>local</cluster.issuer>
 		<namespace>local</namespace>
 		<image.tag>local</image.tag>
@@ -158,6 +158,7 @@
 				<version>1.8.0</version>
 				<configuration>
 					<namespace>${namespace}</namespace>
+					<recreate>true</recreate>
 					<images>
 						<image>
 							<name>${image.name}:${image.tag}</name>
@@ -165,6 +166,9 @@
 					</images>
 					<enricher>
 						<config>
+							<jkube-image>
+								<pullPolicy>Always</pullPolicy>
+							</jkube-image>
 							<jkube-healthcheck-spring-boot>
 								<timeoutSecounds>60</timeoutSecounds>
 								<readinessProbeInitialDelaySeconds>60</readinessProbeInitialDelaySeconds>
@@ -173,7 +177,6 @@
 						</config>
 					</enricher>
 					<resources>
-						<imagePullPolicy>Always</imagePullPolicy>
 						<ingress>
 							<ingressTlsConfigs>
 								<ingressTlsConfig>

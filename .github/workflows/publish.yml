@@ -58,14 +58,14 @@ jobs:
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
           INGRESS_SECRET: dev-tls
           IMAGE_TAG: 'dev'
-          HOSTNAME: 'dev.jackbourner.co.uk'
+          HOSTNAME: 'https://dev.jackbourner.co.uk'
   job3:
     needs: job2
     name: Deploy to Prod
     runs-on: ubuntu-latest
     environment:
       name: 'Production'
-      url: 'jackbourner.co.uk'
+      url: 'https://jackbourner.co.uk'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
