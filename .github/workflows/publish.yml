@@ -27,6 +27,7 @@ jobs:
           mvn clean package -B -ntp jib:build
         env:
           IMAGE_TAG: latest
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
   job2:
     needs: job1
     name: Deploy to Dev
