@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>Jack Bourner</title>
@@ -214,10 +214,11 @@
 						<div class="row">
 							<div class="col-md-6">
 								<!-- about text -->
-								<p>I am Jack Bourner, a backend developer from London, United Kingdom.
-									I have put this website together to give a glimp into my experience and some of the skills I have.
+								<p>Hi! Welcome to my website. My name is Jack Bourner, and I'm a backend developer from London, United Kingdom.
+									I have created this website for a few reasons. The first is to act as a sandbox
+									to test out new technologies and the seconds is to show portential employees the skills I have.
 									This website is hosted on my raspberry pi cluster(Running rasbian 64 bit os), which runs kubenetes(K3s).
-									This page, and part of this site, is run on spring boot and thymeleaf.
+									This page and parts of the site, use tomcat, spring boot and thymeleaf.
 								</p>
 								<div class="mt-3">
 									<a href="files/CV.docx" class="btn btn-default">Download CV</a>
@@ -241,7 +242,7 @@
 								<!-- skill item -->
 								<div class="skill-item">
 									<div class="skill-info clearfix">
-										<h4 class="float-left mb-3 mt-0">UI/UX design</h4>
+										<h4 class="float-left mb-3 mt-0">Automation</h4>
 										<span class="float-right">95%</span>
 									</div>
 									<div class="progress">
@@ -254,7 +255,7 @@
 								<!-- skill item -->
 								<div class="skill-item">
 									<div class="skill-info clearfix">
-										<h4 class="float-left mb-3 mt-0">Photography</h4>
+										<h4 class="float-left mb-3 mt-0">Cloud</h4>
 										<span class="float-right">70%</span>
 									</div>
 									<div class="progress">
@@ -279,7 +280,7 @@
 					<div class="fact-item">
 						<span class="icon icon-fire"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">198</em></h3>
+							<h3 class="mb-0 mt-0 number"><em class="count">6</em></h3>
 							<p class="mb-0">Projects completed</p>
 						</div>
 					</div>
@@ -315,8 +316,8 @@
 					<div class="fact-item">
 						<span class="icon icon-badge"></span>
 						<div class="details">
-							<h3 class="mb-0 mt-0 number"><em class="count">35</em></h3>
-							<p class="mb-0">Nominees winner</p>
+							<h3 class="mb-0 mt-0 number"><em class="count">20</em></h3>
+							<p class="mb-0">Courses complete</p>
 						</div>
 					</div>
 				</div>
@@ -341,9 +342,9 @@
 
 				<div class="col-md-4">
 					<!-- service box -->
-					<a href="raspberrypi.html">
+					<a href="/raspberrypi.html	">
 						<div class="service-box rounded data-background padding-30 text-center text-light shadow-blue" data-color="#6C6CE5">
-							<img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
+							<img src="images/jackbourner/raspberry-pi-logo.png" alt="Raspberry pi logo" />
 							<h3 class="mb-3 mt-0">Raspberry Pi Cluster</h3>
 							<p class="mb-0">Check out my cluster of RP4!</p>
 						</div>
@@ -353,20 +354,22 @@
 
 				<div class="col-md-4">
 					<!-- service box -->
-					<div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C">
-						<img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
-						<h3 class="mb-3 mt-0">Call Of Duty API</h3>
-						<p class="mb-0">A bit of fun collecting stats and visualising them</p>
-					</div>
+					<a href="/warzone">
+						<div class="service-box rounded data-background padding-30 text-center shadow-yellow" data-color="#F9D74C">
+							<img style="max-width: 270px;max-height: 270px;"src="images/jackbourner/warzone-logo.png" alt="warzone logo" />
+							<h3 class="mb-3 mt-0">Call Of Duty API</h3>
+							<p class="mb-0">A bit of fun collecting stats</p>
+						</div>
+					</a>
 					<div class="spacer d-md-none d-lg-none" data-height="30"></div>
 				</div>
 
 				<div class="col-md-4">
 					<!-- service box -->
 					<div class="service-box rounded data-background padding-30 text-center text-light shadow-pink" data-color="#F97B8B">
-						<img src="https://via.placeholder.com/80x80" alt="UI/UX design" />
+						<img style="max-width: 270px;max-height: 270px;"src="images/jackbourner/golang-logo.png" alt="golang logo" />
 						<h3 class="mb-3 mt-0">My First GO app</h3>
-						<p class="mb-0">Expanding my horizons and checking out some new programming languages</p>
+						<p class="mb-0">Tying out golang!</p>
 					</div>
 				</div>
 
@@ -879,7 +882,7 @@
 
 				<div class="col-md-8">
 					<!-- Contact Form -->
-					<form id="contact-form" class="contact-form mt-6" method="post" action="form/contact.php">
+					<form id="contact-form" class="contact-form mt-6" action="#" method="POST" th:action="@{/contactForm}" th:object="${contactForm}">
 						
 						<div class="messages"></div>
 						
@@ -887,7 +890,7 @@
 							<div class="column col-md-6">
 								<!-- Name input -->
 								<div class="form-group">
-									<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Your name" required="required" data-error="Name is required.">
+									<input type="text" th:field="*{name}" class="form-control" name="InputName" id="InputName" placeholder="Your name" required="required" data-error="Name is required.">
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -895,7 +898,7 @@
 							<div class="column col-md-6">
 								<!-- Email input -->
 								<div class="form-group">
-									<input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" required="required" data-error="Email is required.">
+									<input type="email" th:field="*{email}" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" required="required" data-error="Email is required.">
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -903,7 +906,7 @@
 							<div class="column col-md-12">
 								<!-- Email input -->
 								<div class="form-group">
-									<input type="text" class="form-control" id="InputSubject" name="InputSubject" placeholder="Subject" required="required" data-error="Subject is required.">
+									<input type="text" th:field="*{subject}" class="form-control" id="InputSubject" name="InputSubject" placeholder="Subject" required="required" data-error="Subject is required.">
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
@@ -911,7 +914,7 @@
 							<div class="column col-md-12">
 								<!-- Message textarea -->
 								<div class="form-group">
-									<textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
+									<textarea name="InputMessage" th:field="*{message}" id="InputMessage" class="form-control" rows="5" placeholder="Message" required="required" data-error="Message is required."></textarea>
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>

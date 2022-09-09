@@ -4,10 +4,10 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Demo contact form <sender@yourdomain.com>';
+$from = 'jackbourner.mail';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <reciever@example.com>';
+$sendTo = 'jfbourner@gmail.com';
 
 // subject of the email
 $subject = 'New message from contact form';
@@ -43,7 +43,7 @@ try
         }
     }
 
-    // All the neccessary headers for the email.
+    // All the necessary headers for the email.
     $headers = array('Content-Type: text/plain; charset="UTF-8";',
         'From: ' . $from,
         'Reply-To: ' . $from,

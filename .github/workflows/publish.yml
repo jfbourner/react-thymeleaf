@@ -54,6 +54,7 @@ jobs:
           kubectl config use-context dev-context 
           mvn -B -ntp -P dev k8s:resource k8s:apply
         env:
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
           INGRESS_SECRET: dev-tls
@@ -86,6 +87,7 @@ jobs:
           kubectl config use-context prod-context 
           mvn -B -ntp -P prod k8s:resource k8s:apply
         env:
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
           INGRESS_SECRET: echo-tls
