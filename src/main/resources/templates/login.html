@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:th="https://www.thymeleaf.org">
+<head th:replace="standard-webpage :: head"/>
+<body>
+<header th:replace="standard-webpage :: mobile-header"/>
+<header th:replace="standard-webpage :: desktop-header"/>
+<<!-- main layout -->
+<main class="content-2">
+
+    <!-- section page -->
+    <section-webpage id="page">
+
+        <div class="rounded bg-white shadow-dark padding-30" style="max-width:500px;margin:auto;">
+
+            <!-- section title -->
+            <h2 class="section-title wow fadeInUp" style="margin:0px">Login</h2>
+            <p></p>
+            <div class="center">
+                <div th:if="${param.error}">
+                    Invalid username and password.
+                </div>
+                <div th:if="${param.logout}">
+                    You have been logged out.
+                </div>
+                <form method="post" th:action="@{/login}">
+                    <!-- Name input -->
+                    <div class="form-group">
+                        <input autofocus class="form-control" data-error="Username is required." id="username"
+                               name="username"
+                               placeholder="Username" required="required" type="text">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" data-error="Password is required." id="password" name="password"
+                               placeholder="Password"
+                               required="required" type="password">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <button class="btn btn-default" id="submit" name="submit" type="submit" value="Sign In">Sign in
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section-webpage>
+</main>
+<!-- SCRIPTS -->
+<th:block th:include="standard-webpage :: scripts"></th:block>
+</body>
+</html>

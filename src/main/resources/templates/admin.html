@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="standard-webpage :: head"/>
+<body>
+<div id="preloader" th:replace="standard-webpage :: preloader"/>
+<header th:replace="standard-webpage :: mobile-header"/>
+<header th:replace="standard-webpage :: desktop-header"/>
+<!-- main layout -->
+<main class="content-2">
+
+    <!-- section page -->
+    <section-webpage id="page">
+        <div id="cont" class="rounded bg-white shadow-dark padding-30">
+            <h2 class="section-title wow fadeInUp" style="margin:0px">Admin Console</h2>
+            <p></p>
+            <p>Admin page that should be secured by spring secutiry</p>
+            <h3>Admin</h3>
+        </div>
+    </section-webpage>
+
+    <div class="spacer" data-height="96"></div>
+
+</main>
+
+<!-- Go to top button -->
+<a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<!-- SCRIPTS -->
+<th:block th:include="standard-webpage :: scripts"></th:block>
+
+</body>
+</html>
