@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.0</version>
+		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jackbourner</groupId>
@@ -56,9 +56,8 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-spring-boot-starter</artifactId>
-			<version>3.16.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -133,6 +132,12 @@
 							<tag>${image.tag}</tag>
 						</tags>
 					</to>
+					<container>
+						<environment>
+							<!--suppress UnresolvedMavenProperty -->
+							<MAIL_PASSWORD>${env.MAIL_PASSWORD}</MAIL_PASSWORD>
+						</environment>
+					</container>
 				</configuration>
 				<executions>
 					<execution>

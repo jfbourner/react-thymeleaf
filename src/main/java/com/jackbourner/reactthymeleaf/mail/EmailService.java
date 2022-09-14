@@ -35,7 +35,7 @@ public class EmailService {
         context.setVariable("introduction", "Welcome");
         context.setVariable("contactForm", contactForm);
         context.setVariable("logo", "logo");
-        String process = templateEngine.process("email-confirmation", context);
+        String process = templateEngine.process("mail/email-confirmation", context);
 
         helper.setSubject("Hi " + contactForm.name);
         helper.setText(process, true);

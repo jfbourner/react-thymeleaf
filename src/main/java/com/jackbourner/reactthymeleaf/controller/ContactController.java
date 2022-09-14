@@ -11,17 +11,19 @@ import javax.mail.MessagingException;
 
 @RestController
 @Log4j2
+@SuppressWarnings("unused")
 public class ContactController {
 
     @Autowired
     EmailService emailService;
 
     @PostMapping("/contactForm")
+
     public ContactResponse contactFormSubmit(@ModelAttribute ContactForm contactForm, Model model) {
         log.info(contactForm);
         try {
             emailService.sendMail(contactForm);
-        }catch (MessagingException e) {
+        }catch (MessagingException | RuntimeException e) {
             return ContactResponse.builder()
                     .status(ContactResponse.Status.DANGER)
                     .message(e.getMessage())
@@ -32,11 +34,4 @@ public class ContactController {
                 .message("Thanks for your email " + contactForm.getName() + ". I will get back to you :)")
                 .build();
     }
-
-    /*@GetMapping
-    public String contactFormAck(Model model){
-        //If the email was sent successfully then replace with success + details
-        //else send error message
-
-    }*/
 }

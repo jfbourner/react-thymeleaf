@@ -2444,3 +2444,11 @@ body {
     padding-top: 15px;
 }
 /*# sourceMappingURL=style.css.map */
+
+.center {
+  border-radius: 25px;
+  background: #ffffff;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
