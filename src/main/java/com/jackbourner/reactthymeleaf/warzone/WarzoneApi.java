@@ -29,8 +29,8 @@ public class WarzoneApi {
                         .block();
 
         String XSFR_TOKEN = "";
-        if (Objects.nonNull(result) && Objects.nonNull(result.getHeaders())) {
-            HttpHeaders headers =result.getHeaders();
+        if (Objects.nonNull(result)) {
+            HttpHeaders headers = result.getHeaders();
             List<String> s = headers.get("Set-Cookie");
             XSFR_TOKEN = Objects.nonNull(s) ? s.get(0).split(";")[0] : "";
         }
