@@ -4,7 +4,6 @@ import com.jackbourner.reactthymeleaf.mail.ContactForm;
 import com.jackbourner.reactthymeleaf.mail.EmailService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
@@ -18,8 +17,7 @@ public class ContactController {
     EmailService emailService;
 
     @PostMapping("/contactForm")
-
-    public ContactResponse contactFormSubmit(@ModelAttribute ContactForm contactForm, Model model) {
+    public ContactResponse contactFormSubmit(@ModelAttribute ContactForm contactForm) {
         log.info(contactForm);
         try {
             emailService.sendMail(contactForm);

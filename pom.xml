@@ -25,6 +25,7 @@
 		<image.tag>local</image.tag>
 		<ingress.secret>dev-tls</ingress.secret>
 		<host.name>localhost</host.name>
+<!--		<thymeleaf.version>3.1.0.M1</thymeleaf.version>-->
 	</properties>
 	<dependencies>
 		<dependency>
@@ -64,6 +65,10 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
