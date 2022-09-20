@@ -19,20 +19,20 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests()
-                .antMatchers("/css/**", "/files/**", "/fonts/**", "/form/**", "/images/**", "/js/**", "/webfonts/**").permitAll()
-                .antMatchers("/", "/index", "/login", "/raspberrypi.html", "/warzone").permitAll()
-                .antMatchers("/admin").hasRole("ADMIN")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin(form -> form
-                        .loginPage("/login")
-                        .permitAll())
-                .logout(logout  -> logout
-                        .logoutSuccessUrl("/")
-                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
-                        .invalidateHttpSession(true));
-
+        http
+            .authorizeHttpRequests()
+            .antMatchers("/css/**", "/files/**", "/fonts/**", "/form/**", "/images/**", "/js/**", "/webfonts/**").permitAll()
+            .antMatchers("/", "/index", "/login", "/raspberrypi.html", "/warzone", "/contactForm").permitAll()
+            .antMatchers("/admin").hasRole("ADMIN")
+            .anyRequest().authenticated()
+            .and()
+            .formLogin(form -> form
+                    .loginPage("/login")
+                    .permitAll())
+            .logout(logout -> logout
+                    .logoutSuccessUrl("/")
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
+                    .invalidateHttpSession(true));
 
         return http.build();
     }

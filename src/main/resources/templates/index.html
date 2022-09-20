@@ -5,6 +5,8 @@
     <title>Jack Bourner</title>
     <meta content="Jack Bourner website" name="description">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     <link href="images/jb.ico" rel="shortcut icon" type="image/x-icon">
 
     <!-- STYLESHEETS -->
@@ -90,7 +92,7 @@
 
     <!-- main menu -->
     <nav>
-        <ul class="vertical-menu scrollspy">
+        <ul class="vertical-menu scrollspy" style="margin-bottom: 0px;">
             <li class="active"><a href="#home"><i class="icon-home"></i>Home</a></li>
             <li><a href="#about"><i class="icon-user-following"></i>About</a></li>
             <li><a href="#projects"><i class="icon-briefcase"></i>Projects</a></li>
@@ -98,12 +100,13 @@
             <li><a href="#works"><i class="icon-layers"></i>Works</a></li>
             <li><a href="#blog"><i class="icon-note"></i>Blog</a></li>
             <li><a href="#contact"><i class="icon-bubbles"></i>Contact</a></li>
-            <li sec:authorize="!isFullyAuthenticated()"><a th:href="@{/login}"><i class="icon-login"></i>Login</a></li>
-            <li sec:authorize="isFullyAuthenticated()"><a th:href="@{/logout}"><i class="icon-logout"></i>Log out</a></li>
+        </ul>
+        <ul class="vertical-menu" style="margin-top: 0px;">
+            <li sec:authorize="!isFullyAuthenticated()"><a href="/login"><i class="icon-login"></i>Login</a></li>
+            <li sec:authorize="isFullyAuthenticated()"><a href="/logout"><i class="icon-logout"></i>Log out</a></li>
         </ul>
 
     </nav>
-    <div id="loginLogout" th:replace="fragments/loginLogout.html :: loginLogout"></div>
     <!-- site footer -->
     <div class="footer">
         <!-- copyright text -->
@@ -410,7 +413,7 @@
                     <!-- service box -->
                     <a href="/warzone">
                         <div class="service-box rounded data-background padding-30 text-center shadow-yellow"
-                             data-color="#F9D74C">
+                             data-color="#F9D74C" >
                             <img alt="warzone logo" src="images/jackbourner/warzone-logo.png"
                                  style="max-width: 270px;max-height: 270px;"/>
                             <h3 class="mb-3 mt-0">Call Of Duty API</h3>
@@ -950,9 +953,8 @@
 
                 <div class="col-md-8">
                     <!-- Contact Form -->
-                    <form action="contactForm" class="contact-form mt-6" id="contact-form" method="POST" th:object="${contactForm}">
+                    <form th:action="@{/contactForm}" action="contactForm" class="contact-form mt-6" id="contact-form" method="POST" th:object="${contactForm}">
                         <div class="messages"></div>
-
                         <div class="row">
                             <div class="column col-md-6">
                                 <!-- Name input -->
@@ -1017,23 +1019,24 @@
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- SCRIPTS -->
-<script src="js/jquery-1.12.3.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/infinite-scroll.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/morphext.min.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/custom.js"></script>
+<script src="/js/jquery-1.12.3.min.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/isotope.pkgd.min.js"></script>
+<script src="/js/infinite-scroll.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/contact.js"></script>
+<script src="/js/validator.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/morphext.min.js"></script>
+<script src="/js/parallax.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://jthemes.net/themes/wp/bolby/bolby9/wp-content/themes/bolby/js/wow.min.js?ver=5.9.4" id="wow-js-js"></script>
 
 </body>
 </html>
