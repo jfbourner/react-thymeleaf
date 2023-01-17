@@ -108,10 +108,10 @@
 
     <build>
         <plugins>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.graalvm.buildtools</groupId>
                 <artifactId>native-maven-plugin</artifactId>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -123,7 +123,7 @@
                         </exclude>
                     </excludes>
                     <image>
-                        <builder>dashaun/builder:tiny</builder>
+                        <builder>paketobuildpacks/builder:tiny</builder>
                         <env>
                             <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                                 --initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic
@@ -298,8 +298,7 @@
                                 </exclude>
                             </excludes>
                             <image>
-                                <builder>dashaun/native-builder:focal-arm64</builder>
-                                <runImage>registry.hub.docker.com/library/openjdk:17.0.2</runImage>
+                                <builder>paketobuildpacks/builder:tiny</builder>
                                 <env>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
                                     <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
@@ -310,7 +309,6 @@
                                 <name>${image.name}:${image.tag}</name>
                                 <!--<name>${project.artifactId}:${project.version}-arm64:${image.tag}</name>-->
                                 <publish>true</publish>
-
                             </image>
                         </configuration>
                     </plugin>
