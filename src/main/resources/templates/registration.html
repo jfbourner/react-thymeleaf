@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head th:replace="~{standard-webpage :: head}"/>
+<body>
+<header th:replace="~{standard-webpage :: mobile-header}"/>
+<header th:replace="~{standard-webpage :: desktop-header}"/>
+<!-- main layout -->
+<main class="content-2">
+
+    <!-- section page -->
+    <section-webpage id="page">
+
+        <div class="rounded bg-white shadow-dark padding-30" style="max-width:500px;margin:auto;">
+
+            <!-- section title -->
+            <h2 class="section-title wow fadeInUp" style="margin:0px">Registration</h2>
+            <p></p>
+            <div class="center">
+                <div th:if="${param.error}">
+                    Invalid username and password.
+                </div>
+                <div th:if="${param.logout}">
+                    You have been logged out.
+                </div>
+                <form method="POST" th:action="@{/registration}" th:object="${user}">
+                    <!-- Name input -->
+                    <div class="form-group">
+                        <input autofocus class="form-control" data-error="First Name is required." id="firstName"
+                               name="firstName"
+                               placeholder="First name" required="required" th:value="${user.firstName}" type="text">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input autofocus class="form-control" data-error="Last Name is required." id="lastName"
+                               name="lastName"
+                               placeholder="Last name" required="required" th:value="${user.lastName}"
+                               type="text">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input autofocus class="form-control" data-error="Username is required." id="username"
+                               name="username"
+                               placeholder="Username" required="required" th:value="${user.username}"
+                               type="text">
+                        <div class="text-danger" th:if="${#fields.hasErrors('username')}">
+                            <p class="error-message" th:errors="*{username}"></p>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <input autofocus class="form-control" data-error="Email is required." id="email"
+                               name="email"
+                               placeholder="Email" required="required" th:value="${user.email}"
+                               type="text">
+                        <div class="text-danger" th:if="${#fields.hasErrors('email')}">
+                            <p class="error-message" th:errors="*{email}"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" data-error="Password is required." id="password" name="password"
+                               placeholder="Password"
+                               required="required" type="password">
+                        <ul class="text-danger" th:each="error: ${#fields.errors('password')}">
+                            <li th:each="message : ${error.split(',')}">
+                                <p class="error-message" th:text="${message}"></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" data-error="Password is required." id="matchingPassword"
+                               name="matchingPassword"
+                               placeholder="Re-enter Password"
+                               required="required" type="password">
+                        <div class="text-danger" th:if="${#fields.hasErrors('matchingPassword')}">
+                            <p class="error-message" th:errors="*{matchingPassword}"></p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-default" id="submit" name="submit" type="submit" value="Sign In">Register
+                    </button>
+                    <a style="float: right;" th:href="@{/login}">Login</a>
+                </form>
+            </div>
+        </div>
+    </section-webpage>
+</main>
+<!-- SCRIPTS -->
+
+<th:block th:insert="~{standard-webpage :: scripts}"></th:block>
+<script src="/js/pwstrength.js" type="text/javascript"></script>
+<!--<script type="text/javascript">
+$(document).ready(function () {
+	$('form').submit(function(event) {
+		register(event);
+	});
+
+	$(":password").keyup(function(){
+		if($("#password").val() != $("#matchPassword").val()){
+	        $("#globalError").show().html("Password does not match!");
+	    }else{
+	    	$("#globalError").html("").hide();
+	    }
+	});
+
+	options = {
+		    common: {minChar:8},
+		    ui: {
+		    	showVerdictsInsideProgressBar:true,
+		    	showErrors:true,
+		    	errorMessages:{
+		    		  wordLength: "Your password is too short",
+		    		  wordNotEmail: "Do not use your email as your password",
+		    		  wordSequences: "Your password contains sequences",
+		    		  wordLowercase: "Use lower case characters",
+		    		  wordUppercase: "Use upper case characters",
+		    	      wordOneNumber: "Use numbers",
+		    		  wordOneSpecialChar: "Use special characters"
+		    		}
+		    	}
+		};
+	 $('#password').pwstrength(options);
+});
+
+</script>-->
+</body>
+</html>

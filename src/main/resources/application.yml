@@ -1,0 +1,61 @@
+server:
+  port: 8080
+
+spring:
+  http:
+    log-request-details: true
+  datasource:
+    url: 'jdbc:h2:mem:testdb'
+    driverClassName: org.h2.Driver
+    platform: h2
+    username: sa
+    password:
+  jpa:
+    hibernate.ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: true
+    defer-datasource-initialization: true
+    show-sql: false
+    properties:
+      hibernate.format_sql: false
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  data:
+    rest:
+      base-path: /api
+
+  devtools:
+    add-properties: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: jfbourner@gmail.com
+    password: ${MAIL_PASSWORD}
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        security: INFO
+        web:
+          reactive:
+            function:
+              client: TRACE
+      hibernate:
+        SQL: INFO
+        type:
+          descriptor:
+            sql:
+              BasicBinder: INFO

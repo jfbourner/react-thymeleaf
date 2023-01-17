@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head th:replace="~{standard-webpage :: head}"/>
+<body>
+<header th:replace="~{standard-webpage :: mobile-header}"/>
+<header th:replace="~{standard-webpage :: desktop-header}"/>
+<<!-- main layout -->
+<main class="content-2">
+
+    <!-- section page -->
+    <section-webpage id="page">
+
+        <div class="rounded bg-white shadow-dark padding-30" style="max-width:500px;margin:auto;">
+
+            <!-- section title -->
+            <h2 class="section-title wow fadeInUp" style="margin:0px">Registration Successful</h2>
+            <p></p>
+            <div class="center">
+                <span><b>First name: </b></span><span th:text="${user.firstName}"></span><br/>
+                <span><b>Last name: </b></span><span th:text="${user.lastName}"></span><br/>
+                <span><b>E-mail: </b></span><span th:text="${user.email}"></span><br/>
+                <span><b>Password: </b></span><span th:text="${user.password}"></span><br/>
+            </div>
+        </div>
+    </section-webpage>
+</main>
+<!-- SCRIPTS -->
+<th:block th:insert="~{standard-webpage :: scripts}"></th:block>
+</body>
+</html>

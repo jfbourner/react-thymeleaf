@@ -1,0 +1,1710 @@
+{
+  "status": "success",
+  "data": {
+    "title": "mw",
+    "platform": "psn",
+    "username": "Ap0c4LyPtO_uK",
+    "type": "wz",
+    "level": 266.0,
+    "maxLevel": 1.0,
+    "levelXpRemainder": 13274.0,
+    "levelXpGained": 29626.0,
+    "prestige": 0.0,
+    "prestigeId": 0.0,
+    "maxPrestige": 0.0,
+    "totalXp": 5831733.0,
+    "paragonRank": 0.0,
+    "paragonId": 0.0,
+    "s": 1.0,
+    "p": 0.0,
+    "lifetime": {
+      "all": {
+        "properties": {
+          "recordLongestWinStreak": 56.0,
+          "recordXpInAMatch": 46232.0,
+          "accuracy": 0.1680934727191925,
+          "losses": 34.0,
+          "totalGamesPlayed": 4986.0,
+          "score": 1.9633553E7,
+          "winLossRatio": 0.7647058963775635,
+          "totalShots": 18573.0,
+          "bestScoreXp": 0.0,
+          "gamesPlayed": 4986.0,
+          "bestSquardKills": 0.0,
+          "bestSguardWave": 0.0,
+          "bestConfirmed": 0.0,
+          "deaths": 13352.0,
+          "wins": 26.0,
+          "bestSquardCrates": 0.0,
+          "kdRatio": 1.5262881517410278,
+          "bestAssists": 13.0,
+          "bestFieldgoals": 0.0,
+          "bestScore": 16300.0,
+          "recordDeathsInAMatch": 32.0,
+          "scorePerGame": 3937.7362615322904,
+          "bestSPM": 1219.0,
+          "bestKillChains": 0.0,
+          "recordKillsInAMatch": 34.0,
+          "suicides": 6127.0,
+          "wlRatio": 0.7647058963775635,
+          "currentWinStreak": 2.0,
+          "bestMatchBonusXp": 0.0,
+          "bestMatchXp": 0.0,
+          "bestSguardWeaponLevel": 0.0,
+          "bestKD": 20.0,
+          "kills": 20379.0,
+          "bestKillsAsInfected": 0.0,
+          "bestReturns": 0.0,
+          "bestStabs": 0.0,
+          "bestKillsAsSurvivor": 0.0,
+          "timePlayedTotal": 41357.0,
+          "bestDestructions": 0.0,
+          "headshots": 4501.0,
+          "bestRescues": 0.0,
+          "assists": 8969.0,
+          "ties": 1.0,
+          "recordKillStreak": 10.0,
+          "bestPlants": 0.0,
+          "misses": 15451.0,
+          "bestDamage": 0.0,
+          "bestSetbacks": 0.0,
+          "bestTouchdowns": 0.0,
+          "scorePerMinute": 28484.009478443797,
+          "bestDeaths": 32.0,
+          "bestMedalXp": 0.0,
+          "bestDefends": 9.0,
+          "bestSquardRevives": 0.0,
+          "bestKills": 34.0,
+          "bestDefuses": 0.0,
+          "bestCaptures": 7.0,
+          "hits": 3122.0,
+          "bestKillStreak": 9.0,
+          "bestDenied": 0.0
+        }
+      },
+      "mode": {
+        "gun": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "setBacks": 0.0,
+            "scorePerMinute": 0.0,
+            "stabs": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "dom": {
+          "properties": {
+            "kills": 58.0,
+            "score": 8950.0,
+            "timePlayed": 3172.0,
+            "kdRatio": 1.0943396226415094,
+            "captures": 16.0,
+            "defends": 11.0,
+            "scorePerMinute": 169.2938209331652,
+            "deaths": 53.0
+          }
+        },
+        "war": {
+          "properties": {
+            "kills": 90.0,
+            "score": 11650.0,
+            "timePlayed": 4691.0,
+            "kdRatio": 0.9090909090909091,
+            "assists": 8.0,
+            "scorePerMinute": 149.00874014069495,
+            "deaths": 99.0
+          }
+        },
+        "hq": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "captures": 0.0,
+            "defends": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "hc_dom": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "captures": 0.0,
+            "defends": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "hc_conf": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "confirms": 0.0,
+            "scorePerMinute": 0.0,
+            "denies": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "koth": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "defends": 0.0,
+            "objTime": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "conf": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "confirms": 0.0,
+            "scorePerMinute": 0.0,
+            "denies": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "hc_hq": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "captures": 0.0,
+            "defends": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "arena": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "damage": 0.0,
+            "kdRatio": 0.0,
+            "assists": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "br_dmz": {
+          "properties": {
+            "wins": 6.0,
+            "kills": 1269.0,
+            "kdRatio": 1.2249034749034748,
+            "downs": 1330.0,
+            "topTwentyFive": 6.0,
+            "objTime": 0.0,
+            "topTen": 6.0,
+            "contracts": 621.0,
+            "revives": 13.0,
+            "topFive": 6.0,
+            "score": 748818.0,
+            "timePlayed": 177267.0,
+            "gamesPlayed": 160.0,
+            "tokens": 0.0,
+            "scorePerMinute": 253.45428083061145,
+            "cash": 9830.0,
+            "deaths": 1036.0
+          }
+        },
+        "br": {
+          "properties": {
+            "wins": 172.0,
+            "kills": 6801.0,
+            "kdRatio": 1.440279542566709,
+            "downs": 6967.0,
+            "topTwentyFive": 1653.0,
+            "objTime": 0.0,
+            "topTen": 1019.0,
+            "contracts": 4663.0,
+            "revives": 921.0,
+            "topFive": 649.0,
+            "score": 8763175.0,
+            "timePlayed": 2283389.0,
+            "gamesPlayed": 1566.0,
+            "tokens": 0.0,
+            "scorePerMinute": 230.26759785564354,
+            "cash": 0.0,
+            "deaths": 4722.0
+          }
+        },
+        "sd": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "plants": 0.0,
+            "scorePerMinute": 0.0,
+            "defuses": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "grnd": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "defends": 0.0,
+            "objTime": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "cyber": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "plants": 0.0,
+            "scorePerMinute": 0.0,
+            "revives": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "hc_war": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "assists": 0.0,
+            "scorePerMinute": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "br_all": {
+          "properties": {
+            "wins": 178.0,
+            "kills": 8070.0,
+            "kdRatio": 1.4015283084404306,
+            "downs": 8297.0,
+            "topTwentyFive": 1659.0,
+            "objTime": 0.0,
+            "topTen": 1025.0,
+            "contracts": 5284.0,
+            "revives": 934.0,
+            "topFive": 655.0,
+            "score": 9511993.0,
+            "timePlayed": 2460656.0,
+            "gamesPlayed": 1726.0,
+            "tokens": 0.0,
+            "scorePerMinute": 231.93797914052186,
+            "cash": 9830.0,
+            "deaths": 5758.0
+          }
+        },
+        "hc_sd": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "plants": 0.0,
+            "scorePerMinute": 0.0,
+            "defuses": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "arm": {
+          "properties": {
+            "kills": 672.0,
+            "score": 103250.0,
+            "timePlayed": 29823.0,
+            "kdRatio": 1.0821256038647342,
+            "captures": 76.0,
+            "defends": 23.0,
+            "scorePerMinute": 207.7255809274721,
+            "deaths": 621.0
+          }
+        },
+        "hc_cyber": {
+          "properties": {
+            "kills": 0.0,
+            "score": 0.0,
+            "timePlayed": 0.0,
+            "kdRatio": 0.0,
+            "plants": 0.0,
+            "scorePerMinute": 0.0,
+            "revives": 0.0,
+            "deaths": 0.0
+          }
+        },
+        "infect": {
+          "properties": {
+            "kills": 2.0,
+            "score": 245.0,
+            "infected": 0.0,
+            "timePlayed": 162.0,
+            "kdRatio": 2.0,
+            "scorePerMinute": 90.74074074074073,
+            "time": 148.0,
+            "deaths": 1.0
+          }
+        }
+      },
+      "map": {},
+      "itemData": {
+        "weapon_assault_rifle": {
+          "iw8_ar_tango21": {
+            "properties": {
+              "hits": 282.0,
+              "kills": 20.0,
+              "kdRatio": 20.0,
+              "headshots": 9.0,
+              "accuracy": 0.1898989898989899,
+              "shots": 1485.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_mike4": {
+            "properties": {
+              "hits": 286.0,
+              "kills": 51.0,
+              "kdRatio": 0.5543478260869565,
+              "headshots": 9.0,
+              "accuracy": 0.1973775017253278,
+              "shots": 1449.0,
+              "deaths": 92.0
+            }
+          },
+          "iw8_ar_valpha": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_falpha": {
+            "properties": {
+              "hits": 194.0,
+              "kills": 39.0,
+              "kdRatio": 39.0,
+              "headshots": 5.0,
+              "accuracy": 0.1961577350859454,
+              "shots": 989.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_mcharlie": {
+            "properties": {
+              "hits": 525.0,
+              "kills": 59.0,
+              "kdRatio": 1.5128205128205128,
+              "headshots": 15.0,
+              "accuracy": 0.1980384760467748,
+              "shots": 2651.0,
+              "deaths": 39.0
+            }
+          },
+          "iw8_ar_akilo47": {
+            "properties": {
+              "hits": 101.0,
+              "kills": 14.0,
+              "kdRatio": 14.0,
+              "headshots": 2.0,
+              "accuracy": 0.13611859838274934,
+              "shots": 742.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_asierra12": {
+            "properties": {
+              "hits": 89.0,
+              "kills": 24.0,
+              "kdRatio": 24.0,
+              "headshots": 7.0,
+              "accuracy": 0.24722222222222223,
+              "shots": 360.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_galima": {
+            "properties": {
+              "hits": 2979.0,
+              "kills": 702.0,
+              "kdRatio": 1.1898305084745762,
+              "headshots": 150.0,
+              "accuracy": 0.17507052186177716,
+              "shots": 17016.0,
+              "deaths": 590.0
+            }
+          },
+          "iw8_ar_sierra552": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_falima": {
+            "properties": {
+              "hits": 26.0,
+              "kills": 8.0,
+              "kdRatio": 8.0,
+              "headshots": 0.0,
+              "accuracy": 0.21666666666666667,
+              "shots": 120.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_anovember94": {
+            "properties": {
+              "hits": 45.0,
+              "kills": 9.0,
+              "kdRatio": 9.0,
+              "headshots": 0.0,
+              "accuracy": 0.2631578947368421,
+              "shots": 171.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_ar_kilo433": {
+            "properties": {
+              "hits": 154.0,
+              "kills": 22.0,
+              "kdRatio": 1.0476190476190477,
+              "headshots": 2.0,
+              "accuracy": 0.1764032073310424,
+              "shots": 873.0,
+              "deaths": 21.0
+            }
+          },
+          "iw8_ar_scharlie": {
+            "properties": {
+              "hits": 70.0,
+              "kills": 15.0,
+              "kdRatio": 15.0,
+              "headshots": 7.0,
+              "accuracy": 0.26717557251908397,
+              "shots": 262.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_shotgun": {
+          "iw8_sh_mike26": {
+            "properties": {
+              "hits": 21.0,
+              "kills": 7.0,
+              "kdRatio": 7.0,
+              "headshots": 1.0,
+              "accuracy": 0.45652173913043476,
+              "shots": 46.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sh_charlie725": {
+            "properties": {
+              "hits": 41.0,
+              "kills": 19.0,
+              "kdRatio": 19.0,
+              "headshots": 4.0,
+              "accuracy": 0.640625,
+              "shots": 64.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sh_oscar12": {
+            "properties": {
+              "hits": 16.0,
+              "kills": 3.0,
+              "kdRatio": 3.0,
+              "headshots": 0.0,
+              "accuracy": 0.5161290322580645,
+              "shots": 31.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sh_aalpha12": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sh_romeo870": {
+            "properties": {
+              "hits": 16.0,
+              "kills": 7.0,
+              "kdRatio": 7.0,
+              "headshots": 0.0,
+              "accuracy": 0.45714285714285713,
+              "shots": 35.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sh_dpapa12": {
+            "properties": {
+              "hits": 72.0,
+              "kills": 24.0,
+              "kdRatio": 24.0,
+              "headshots": 0.0,
+              "accuracy": 0.43373493975903615,
+              "shots": 166.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_marksman": {
+          "iw8_sn_sbeta": {
+            "properties": {
+              "hits": 45.0,
+              "kills": 20.0,
+              "kdRatio": 20.0,
+              "headshots": 7.0,
+              "accuracy": 0.3543307086614173,
+              "shots": 127.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_crossbow": {
+            "properties": {
+              "hits": 48.0,
+              "kills": 63.0,
+              "kdRatio": 63.0,
+              "headshots": 7.0,
+              "accuracy": 0.25668449197860965,
+              "shots": 187.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_romeo700": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_kilo98": {
+            "properties": {
+              "hits": 110.0,
+              "kills": 39.0,
+              "kdRatio": 39.0,
+              "headshots": 13.0,
+              "accuracy": 0.3374233128834356,
+              "shots": 326.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_mike14": {
+            "properties": {
+              "hits": 43.0,
+              "kills": 9.0,
+              "kdRatio": 9.0,
+              "headshots": 2.0,
+              "accuracy": 0.34959349593495936,
+              "shots": 123.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_sksierra": {
+            "properties": {
+              "hits": 16.0,
+              "kills": 5.0,
+              "kdRatio": 5.0,
+              "headshots": 0.0,
+              "accuracy": 0.18604651162790697,
+              "shots": 86.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_sniper": {
+          "iw8_sn_alpha50": {
+            "properties": {
+              "hits": 11.0,
+              "kills": 7.0,
+              "kdRatio": 7.0,
+              "headshots": 3.0,
+              "accuracy": 0.3548387096774194,
+              "shots": 31.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_hdromeo": {
+            "properties": {
+              "hits": 7.0,
+              "kills": 6.0,
+              "kdRatio": 6.0,
+              "headshots": 1.0,
+              "accuracy": 0.1891891891891892,
+              "shots": 37.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_delta": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sn_xmike109": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 1.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "tacticals": {
+          "equip_gas_grenade": {
+            "properties": {
+              "extraStat1": 18.0,
+              "uses": 49.0
+            }
+          },
+          "equip_snapshot_grenade": {
+            "properties": {
+              "extraStat1": 321.0,
+              "uses": 202.0
+            }
+          },
+          "equip_decoy": {
+            "properties": {
+              "extraStat1": 541.0,
+              "uses": 54.0
+            }
+          },
+          "equip_smoke": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 135.0
+            }
+          },
+          "equip_concussion": {
+            "properties": {
+              "extraStat1": 666.0,
+              "uses": 1353.0
+            }
+          },
+          "equip_hb_sensor": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 2909.0
+            }
+          },
+          "equip_flash": {
+            "properties": {
+              "extraStat1": 177.0,
+              "uses": 382.0
+            }
+          },
+          "equip_adrenaline": {
+            "properties": {
+              "extraStat1": 24630.0,
+              "uses": 828.0
+            }
+          }
+        },
+        "lethals": {
+          "equip_frag": {
+            "properties": {
+              "kills": 18.0,
+              "uses": 293.0
+            }
+          },
+          "equip_thermite": {
+            "properties": {
+              "kills": 21.0,
+              "uses": 377.0
+            }
+          },
+          "equip_semtex": {
+            "properties": {
+              "kills": 36.0,
+              "uses": 430.0
+            }
+          },
+          "equip_claymore": {
+            "properties": {
+              "kills": 15.0,
+              "uses": 1621.0
+            }
+          },
+          "equip_c4": {
+            "properties": {
+              "kills": 4.0,
+              "uses": 140.0
+            }
+          },
+          "equip_at_mine": {
+            "properties": {
+              "kills": 6.0,
+              "uses": 596.0
+            }
+          },
+          "equip_throwing_knife": {
+            "properties": {
+              "kills": 406.0,
+              "uses": 699.0
+            }
+          },
+          "equip_molotov": {
+            "properties": {
+              "kills": 4.0,
+              "uses": 83.0
+            }
+          }
+        },
+        "weapon_lmg": {
+          "iw8_lm_kilo121": {
+            "properties": {
+              "hits": 62.0,
+              "kills": 10.0,
+              "kdRatio": 10.0,
+              "headshots": 3.0,
+              "accuracy": 0.14657210401891252,
+              "shots": 423.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_lm_mkilo3": {
+            "properties": {
+              "hits": 36.0,
+              "kills": 8.0,
+              "kdRatio": 8.0,
+              "headshots": 1.0,
+              "accuracy": 0.18652849740932642,
+              "shots": 193.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_lm_mgolf34": {
+            "properties": {
+              "hits": 63.0,
+              "kills": 9.0,
+              "kdRatio": 9.0,
+              "headshots": 4.0,
+              "accuracy": 0.09333333333333334,
+              "shots": 675.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_lm_lima86": {
+            "properties": {
+              "hits": 427.0,
+              "kills": 68.0,
+              "kdRatio": 68.0,
+              "headshots": 22.0,
+              "accuracy": 0.19506624029237093,
+              "shots": 2189.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_lm_pkilo": {
+            "properties": {
+              "hits": 299.0,
+              "kills": 43.0,
+              "kdRatio": 3.909090909090909,
+              "headshots": 8.0,
+              "accuracy": 0.13894052044609664,
+              "shots": 2152.0,
+              "deaths": 11.0
+            }
+          },
+          "iw8_lm_sierrax": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_lm_mgolf36": {
+            "properties": {
+              "hits": 12.0,
+              "kills": 3.0,
+              "kdRatio": 3.0,
+              "headshots": 0.0,
+              "accuracy": 0.21052631578947367,
+              "shots": 57.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_launcher": {
+          "iw8_la_gromeo": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 2.0,
+              "kdRatio": 2.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 4.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_la_rpapa7": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 2.0,
+              "kdRatio": 2.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 9.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_la_juliet": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_la_kgolf": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 1.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_la_mike32": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "supers": {
+          "super_emp_drone": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 0.0
+            }
+          },
+          "super_trophy": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 75.0,
+              "misc2": 0.0,
+              "uses": 240.0
+            }
+          },
+          "super_ammo_drop": {
+            "properties": {
+              "kills": 6.0,
+              "misc1": 2887.0,
+              "misc2": 0.0,
+              "uses": 680.0
+            }
+          },
+          "super_weapon_drop": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 6.0,
+              "misc2": 0.0,
+              "uses": 22.0
+            }
+          },
+          "super_fulton": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 215.0
+            }
+          },
+          "super_armor_drop": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 746.0
+            }
+          },
+          "super_select": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 0.0
+            }
+          },
+          "super_tac_insert": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 0.0
+            }
+          },
+          "super_recon_drone": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 8.0,
+              "misc2": 0.0,
+              "uses": 4.0
+            }
+          },
+          "super_deadsilence": {
+            "properties": {
+              "kills": 294.0,
+              "misc1": 3.0,
+              "misc2": 0.0,
+              "uses": 665.0
+            }
+          },
+          "super_supply_drop": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 1373.0
+            }
+          },
+          "super_tac_cover": {
+            "properties": {
+              "kills": 0.0,
+              "misc1": 14247.0,
+              "misc2": 0.0,
+              "uses": 66.0
+            }
+          },
+          "super_support_box": {
+            "properties": {
+              "kills": 43.0,
+              "misc1": 0.0,
+              "misc2": 0.0,
+              "uses": 84.0
+            }
+          }
+        },
+        "weapon_pistol": {
+          "iw8_pi_cpapa": {
+            "properties": {
+              "hits": 1.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.037037037037037035,
+              "shots": 27.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_pi_mike9": {
+            "properties": {
+              "hits": 961.0,
+              "kills": 53.0,
+              "kdRatio": 53.0,
+              "headshots": 8.0,
+              "accuracy": 0.4851085310449268,
+              "shots": 1981.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_pi_mike1911": {
+            "properties": {
+              "hits": 277.0,
+              "kills": 26.0,
+              "kdRatio": 0.9629629629629629,
+              "headshots": 5.0,
+              "accuracy": 0.4235474006116208,
+              "shots": 654.0,
+              "deaths": 27.0
+            }
+          },
+          "iw8_pi_golf21": {
+            "properties": {
+              "hits": 822.0,
+              "kills": 45.0,
+              "kdRatio": 1.9565217391304348,
+              "headshots": 5.0,
+              "accuracy": 0.3888363292336802,
+              "shots": 2114.0,
+              "deaths": 23.0
+            }
+          },
+          "iw8_pi_decho": {
+            "properties": {
+              "hits": 65.0,
+              "kills": 12.0,
+              "kdRatio": 12.0,
+              "headshots": 5.0,
+              "accuracy": 0.20249221183800623,
+              "shots": 321.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_pi_papa320": {
+            "properties": {
+              "hits": 425.0,
+              "kills": 35.0,
+              "kdRatio": 35.0,
+              "headshots": 4.0,
+              "accuracy": 0.4199604743083004,
+              "shots": 1012.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_other": {
+          "iw8_me_riotshield": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 1.0,
+              "kdRatio": 1.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_smg": {
+          "iw8_sm_mpapa7": {
+            "properties": {
+              "hits": 149.0,
+              "kills": 13.0,
+              "kdRatio": 13.0,
+              "headshots": 0.0,
+              "accuracy": 0.19127086007702182,
+              "shots": 779.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_augolf": {
+            "properties": {
+              "hits": 260.0,
+              "kills": 29.0,
+              "kdRatio": 2.6363636363636362,
+              "headshots": 6.0,
+              "accuracy": 0.18207282913165265,
+              "shots": 1428.0,
+              "deaths": 11.0
+            }
+          },
+          "iw8_sm_papa90": {
+            "properties": {
+              "hits": 170.0,
+              "kills": 13.0,
+              "kdRatio": 13.0,
+              "headshots": 1.0,
+              "accuracy": 0.14202172096908938,
+              "shots": 1197.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_charlie9": {
+            "properties": {
+              "hits": 74.0,
+              "kills": 1.0,
+              "kdRatio": 1.0,
+              "headshots": 0.0,
+              "accuracy": 0.4157303370786517,
+              "shots": 178.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_mpapa5": {
+            "properties": {
+              "hits": 116.0,
+              "kills": 15.0,
+              "kdRatio": 15.0,
+              "headshots": 2.0,
+              "accuracy": 0.2049469964664311,
+              "shots": 566.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_smgolf45": {
+            "properties": {
+              "hits": 70.0,
+              "kills": 1.0,
+              "kdRatio": 1.0,
+              "headshots": 0.0,
+              "accuracy": 0.42168674698795183,
+              "shots": 166.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_beta": {
+            "properties": {
+              "hits": 136.0,
+              "kills": 15.0,
+              "kdRatio": 15.0,
+              "headshots": 0.0,
+              "accuracy": 0.15315315315315314,
+              "shots": 888.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_victor": {
+            "properties": {
+              "hits": 89.0,
+              "kills": 3.0,
+              "kdRatio": 3.0,
+              "headshots": 1.0,
+              "accuracy": 0.2772585669781931,
+              "shots": 321.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_sm_uzulu": {
+            "properties": {
+              "hits": 55.0,
+              "kills": 2.0,
+              "kdRatio": 2.0,
+              "headshots": 1.0,
+              "accuracy": 0.45454545454545453,
+              "shots": 121.0,
+              "deaths": 0.0
+            }
+          }
+        },
+        "weapon_melee": {
+          "iw8_me_akimboblunt": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_me_akimboblades": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          },
+          "iw8_knife": {
+            "properties": {
+              "hits": 0.0,
+              "kills": 0.0,
+              "kdRatio": 0.0,
+              "headshots": 0.0,
+              "accuracy": 0.0,
+              "shots": 0.0,
+              "deaths": 0.0
+            }
+          }
+        }
+      },
+      "scorestreakData": {
+        "lethalScorestreakData": {
+          "precision_airstrike": {
+            "properties": {
+              "extraStat1": 56.0,
+              "uses": 435.0,
+              "awardedCount": 0.0
+            }
+          },
+          "cruise_predator": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "manual_turret": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "white_phosphorus": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "hover_jet": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "chopper_gunner": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 1.0
+            }
+          },
+          "gunship": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "sentry_gun": {
+            "properties": {
+              "extraStat1": 2.0,
+              "uses": 21.0,
+              "awardedCount": 0.0
+            }
+          },
+          "toma_strike": {
+            "properties": {
+              "extraStat1": 54.0,
+              "uses": 533.0,
+              "awardedCount": 43.0
+            }
+          },
+          "nuke": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "juggernaut": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "pac_sentry": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "chopper_support": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "bradley": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          }
+        },
+        "supportScorestreakData": {
+          "airdrop": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "radar_drone_overwatch": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 96.0,
+              "awardedCount": 105.0
+            }
+          },
+          "scrambler_drone_guard": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "uav": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 1536.0,
+              "awardedCount": 0.0
+            }
+          },
+          "airdrop_multiple": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 0.0,
+              "awardedCount": 0.0
+            }
+          },
+          "directional_uav": {
+            "properties": {
+              "extraStat1": 0.0,
+              "uses": 23.0,
+              "awardedCount": 0.0
+            }
+          }
+        }
+      },
+      "accoladeData": {
+        "properties": {
+          "classChanges": 1.0,
+          "highestAvgAltitude": 1.0,
+          "killsFromBehind": 11.0,
+          "lmgDeaths": 10.0,
+          "riotShieldDamageAbsorbed": 0.0,
+          "flashbangHits": 7.0,
+          "meleeKills": 9.0,
+          "tagsLargestBank": 0.0,
+          "shotgunKills": 4.0,
+          "sniperDeaths": 5.0,
+          "timeProne": 0.0,
+          "killstreakWhitePhosphorousKillsAssists": 0.0,
+          "shortestLife": 17.0,
+          "deathsFromBehind": 7.0,
+          "higherRankedKills": 12.0,
+          "mostAssists": 19.0,
+          "leastKills": 23.0,
+          "tagsDenied": 0.0,
+          "killstreakWheelsonKills": 0.0,
+          "sniperHeadshots": 0.0,
+          "killstreakJuggernautKills": 0.0,
+          "smokesUsed": 0.0,
+          "avengerKills": 2.0,
+          "decoyHits": 2.0,
+          "killstreakCarePackageUsed": 0.0,
+          "molotovKills": 0.0,
+          "gasHits": 0.0,
+          "comebackKills": 6.0,
+          "lmgHeadshots": 2.0,
+          "smgDeaths": 11.0,
+          "carrierKills": 0.0,
+          "deployableCoverUsed": 0.0,
+          "thermiteKills": 0.0,
+          "arKills": 13.0,
+          "c4Kills": 0.0,
+          "suicides": 15.0,
+          "clutch": 0.0,
+          "survivorKills": 0.0,
+          "killstreakGunshipKills": 0.0,
+          "timeSpentAsPassenger": 5.0,
+          "returns": 0.0,
+          "smgHeadshots": 3.0,
+          "launcherDeaths": 5.0,
+          "oneShotOneKills": 2.0,
+          "ammoBoxUsed": 2.0,
+          "spawnSelectSquad": 2.0,
+          "weaponPickups": 15.0,
+          "pointBlankKills": 9.0,
+          "tagsCaptured": 0.0,
+          "killstreakGroundKills": 0.0,
+          "distanceTraveledInVehicle": 1.0,
+          "longestLife": 13.0,
+          "stunHits": 7.0,
+          "spawnSelectFlag": 0.0,
+          "shotgunHeadshots": 1.0,
+          "bombDefused": 0.0,
+          "snapshotHits": 0.0,
+          "noKillsWithDeath": 11.0,
+          "killstreakAUAVAssists": 0.0,
+          "killstreakPersonalUAVKills": 19.0,
+          "tacticalInsertionSpawns": 0.0,
+          "launcherKills": 0.0,
+          "spawnSelectVehicle": 2.0,
+          "mostKillsLeastDeaths": 2.0,
+          "mostKills": 8.0,
+          "defends": 2.0,
+          "timeSpentAsDriver": 1.0,
+          "bombDetonated": 0.0,
+          "arHeadshots": 13.0,
+          "timeOnPoint": 0.0,
+          "lmgKills": 5.0,
+          "killstreakUAVAssists": 0.0,
+          "carepackagesCaptured": 0.0,
+          "mostKillsLongestStreak": 2.0,
+          "killstreakCruiseMissileKills": 0.0,
+          "longestStreak": 3.0,
+          "destroyedKillstreaks": 0.0,
+          "hipfireKills": 14.0,
+          "stimDamageHealed": 0.0,
+          "skippedKillcams": 7.0,
+          "leastAssists": 43.0,
+          "mostMultikills": 6.0,
+          "highestRankedKills": 3.0,
+          "killstreakAirstrikeKills": 1.0,
+          "distanceTravelled": 3.0,
+          "killstreakKills": 3.0,
+          "semtexKills": 4.0,
+          "penetrationKills": 5.0,
+          "explosionsSurvived": 12.0,
+          "highestMultikill": 16.0,
+          "arDeaths": 19.0,
+          "longshotKills": 7.0,
+          "proximityMineKills": 0.0,
+          "tagsMegaBanked": 0.0,
+          "mostKillsMostHeadshots": 2.0,
+          "firstInfected": 0.0,
+          "killstreakCUAVAssists": 0.0,
+          "throwingKnifeKills": 0.0,
+          "executionKills": 0.0,
+          "lastSurvivor": 0.0,
+          "reconDroneMarks": 0.0,
+          "deadSilenceKills": 0.0,
+          "revengeKills": 2.0,
+          "infectedKills": 0.0,
+          "killEnemyTeam": 2.0,
+          "sniperKills": 3.0,
+          "killstreakCluserStrikeKills": 11.0,
+          "meleeDeaths": 6.0,
+          "timeWatchingKillcams": 11.0,
+          "killstreakTankKills": 0.0,
+          "noKillNoDeath": 1.0,
+          "shotgunDeaths": 5.0,
+          "killstreakChopperGunnerKills": 0.0,
+          "shotsFired": 6.0,
+          "stoppingPowerKills": 1.0,
+          "pistolPeaths": 6.0,
+          "killstreakShieldTurretKills": 0.0,
+          "timeCrouched": 0.0,
+          "noDeathsFromBehind": 122.0,
+          "bombPlanted": 0.0,
+          "setbacks": 0.0,
+          "smgKills": 14.0,
+          "claymoreKills": 2.0,
+          "kills10NoDeaths": 0.0,
+          "pistolHeadshots": 1.0,
+          "killstreakVTOLJetKills": 0.0,
+          "headshots": 7.0,
+          "mostDeaths": 14.0,
+          "adsKills": 9.0,
+          "empDroneHits": 0.0,
+          "defenderKills": 14.0,
+          "launcherHeadshots": 0.0,
+          "timesSelectedAsSquadLeader": 0.0,
+          "killstreakAirKills": 3.0,
+          "assaults": 0.0,
+          "fragKills": 5.0,
+          "killstreakEmergencyAirdropUsed": 0.0,
+          "captures": 1.0,
+          "killstreakChopperSupportKills": 0.0,
+          "spawnSelectBase": 0.0,
+          "noKill10Deaths": 0.0,
+          "leastDeaths": 29.0,
+          "killstreakSentryGunKills": 0.0,
+          "longestTimeSpentOnWeapon": 0.0,
+          "lowerRankedKills": 9.0,
+          "trophySystemHits": 0.0,
+          "clutchRevives": 0.0,
+          "lowestAvgAltitude": 5.0,
+          "pickups": 0.0,
+          "pistolKills": 6.0,
+          "reloads": 11.0
+        }
+      }
+    },
+    "weekly": {
+      "all": {
+        "properties": {
+          "kills": 125.0,
+          "kdRatio": 1.644736842105263,
+          "wallBangs": 0.0,
+          "avgLifeTime": 486.57575757575756,
+          "gulagDeaths": 20.0,
+          "score": 120000.0,
+          "timePlayed": 48171.0,
+          "headshotPercentage": 0.32,
+          "headshots": 40.0,
+          "executions": 0.0,
+          "matchesPlayed": 23.0,
+          "assists": 40.0,
+          "gulagKills": 3.0,
+          "nearmisses": 0.0,
+          "killsPerGame": 5.434782608695652,
+          "scorePerMinute": 149.46752195304228,
+          "distanceTraveled": 5752485.951,
+          "damageDone": 78796.0,
+          "deaths": 76.0,
+          "damageTaken": 27131.0
+        }
+      },
+      "mode": {
+        "br_rebirth_rbrthquad": {
+          "properties": {
+            "kills": 15.0,
+            "kdRatio": 3.75,
+            "scorePerGame": 5300.0,
+            "wallBangs": 0.0,
+            "avgLifeTime": 492.6666666666667,
+            "gulagDeaths": 0.0,
+            "score": 10600.0,
+            "timePlayed": 2956.0,
+            "headshotPercentage": 0.26666666666666666,
+            "headshots": 4.0,
+            "executions": 0.0,
+            "matchesPlayed": 2.0,
+            "assists": 2.0,
+            "gulagKills": 0.0,
+            "nearmisses": 0.0,
+            "killsPerGame": 7.5,
+            "scorePerMinute": 215.1556156968877,
+            "distanceTraveled": 211820.596,
+            "damageDone": 6838.0,
+            "deaths": 4.0,
+            "damageTaken": 1663.0
+          }
+        },
+        "br_rebirth_dbd_playlist_wz355/res_trials_quads": {
+          "properties": {
+            "kills": 44.0,
+            "kdRatio": 1.76,
+            "scorePerGame": 3875.0,
+            "wallBangs": 0.0,
+            "avgLifeTime": 342.96875,
+            "gulagDeaths": 1.0,
+            "score": 27125.0,
+            "timePlayed": 10975.0,
+            "headshotPercentage": 0.3181818181818182,
+            "headshots": 14.0,
+            "executions": 0.0,
+            "matchesPlayed": 7.0,
+            "assists": 14.0,
+            "gulagKills": 0.0,
+            "nearmisses": 0.0,
+            "killsPerGame": 6.285714285714286,
+            "scorePerMinute": 148.29157175398635,
+            "distanceTraveled": 911111.9850000001,
+            "damageDone": 25205.0,
+            "deaths": 25.0,
+            "damageTaken": 11096.0
+          }
+        },
+        "br_all": {
+          "properties": {
+            "kills": 125.0,
+            "kdRatio": 1.644736842105263,
+            "wallBangs": 0.0,
+            "avgLifeTime": 486.57575757575756,
+            "gulagDeaths": 20.0,
+            "score": 120000.0,
+            "timePlayed": 48171.0,
+            "headshotPercentage": 0.32,
+            "headshots": 40.0,
+            "executions": 0.0,
+            "matchesPlayed": 23.0,
+            "assists": 40.0,
+            "gulagKills": 3.0,
+            "nearmisses": 0.0,
+            "killsPerGame": 5.434782608695652,
+            "scorePerMinute": 149.46752195304228,
+            "distanceTraveled": 5752485.951,
+            "damageDone": 78796.0,
+            "deaths": 76.0,
+            "damageTaken": 27131.0
+          }
+        },
+        "br_rebirth_rbrthtrios": {
+          "properties": {
+            "kills": 31.0,
+            "kdRatio": 1.7222222222222223,
+            "scorePerGame": 4035.0,
+            "wallBangs": 0.0,
+            "avgLifeTime": 345.7391304347826,
+            "gulagDeaths": 0.0,
+            "score": 20175.0,
+            "timePlayed": 7952.0,
+            "headshotPercentage": 0.3548387096774194,
+            "headshots": 11.0,
+            "executions": 0.0,
+            "matchesPlayed": 5.0,
+            "assists": 13.0,
+            "gulagKills": 0.0,
+            "nearmisses": 0.0,
+            "killsPerGame": 6.2,
+            "scorePerMinute": 152.2258551307847,
+            "distanceTraveled": 668950.73,
+            "damageDone": 19487.0,
+            "deaths": 18.0,
+            "damageTaken": 5500.0
+          }
+        },
+        "br_brquads": {
+          "properties": {
+            "kills": 35.0,
+            "kdRatio": 1.206896551724138,
+            "scorePerGame": 6900.0,
+            "wallBangs": 0.0,
+            "avgLifeTime": 691.7894736842105,
+            "gulagDeaths": 19.0,
+            "score": 62100.0,
+            "timePlayed": 26288.0,
+            "headshotPercentage": 0.3142857142857143,
+            "headshots": 11.0,
+            "executions": 0.0,
+            "matchesPlayed": 9.0,
+            "assists": 11.0,
+            "gulagKills": 3.0,
+            "nearmisses": 0.0,
+            "killsPerGame": 3.888888888888889,
+            "scorePerMinute": 141.73767498478395,
+            "distanceTraveled": 3960602.64,
+            "damageDone": 27266.0,
+            "deaths": 29.0,
+            "damageTaken": 8872.0
+          }
+        }
+      },
+      "map": {}
+    },
+    "engagement": null
+  }
+}
