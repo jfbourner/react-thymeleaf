@@ -294,7 +294,7 @@
                                 </exclude>
                             </excludes>
                             <image>
-                                <builder>dashaun/native-builder:focal-arm64</builder>
+                                <builder>paketobuildpacks/builder:tiny</builder>
                                 <env>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
                                     <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
@@ -302,6 +302,7 @@
                                         --initialize-at-run-time=io.netty
                                     </BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                                 </env>
+                                <runImage>ghcr.io/graalvm/jdk:ol8-java17-22.3.0</runImage>
                                 <name>${image.name}:${image.tag}</name>
                                 <!--<name>${project.artifactId}:${project.version}-arm64:${image.tag}</name>-->
                                 <publish>true</publish>
