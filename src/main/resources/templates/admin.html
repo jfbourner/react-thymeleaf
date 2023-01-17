@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="standard-webpage :: head"/>
+<head th:replace="~{standard-webpage :: head}"/>
 <body>
-<div id="preloader" th:replace="standard-webpage :: preloader"/>
-<header th:replace="standard-webpage :: mobile-header"/>
-<header th:replace="standard-webpage :: desktop-header"/>
+<div id="preloader" th:replace="~{standard-webpage :: preloader}"/>
+<header th:replace="~{standard-webpage :: mobile-header}"/>
+<header th:replace="~{standard-webpage :: desktop-header}"/>
 <!-- main layout -->
 <main class="content-2">
 
@@ -12,9 +12,29 @@
     <section-webpage id="page">
         <div id="cont" class="rounded bg-white shadow-dark padding-30">
             <h2 class="section-title wow fadeInUp" style="margin:0px">Admin Console</h2>
-            <p></p>
-            <p>Admin page that should be secured by spring secutiry</p>
-            <h3>Admin</h3>
+            <h3>List of Registered Users</h3>
+            <table class="table table-bordered table-hover">
+                <thead class="table-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Account Enabled</th>
+                    <th>Roles</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each = "user : ${users}">
+                    <td th:text = "${user.firstName}"></td>
+                    <td th:text = "${user.lastName}"></td>
+                    <td th:text = "${user.username}"></td>
+                    <td th:text = "${user.email}"></td>
+                    <td th:text = "${user.enabled}"></td>
+                    <td th:text="${#strings.listJoin(user.roles.![name], ', ')}"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </section-webpage>
 
@@ -26,7 +46,7 @@
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- SCRIPTS -->
-<th:block th:include="standard-webpage :: scripts"></th:block>
+<th:block th:insert="~{standard-webpage :: scripts}"></th:block>
 
 </body>
 </html>

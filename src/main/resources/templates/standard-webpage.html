@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head th:fragment="head">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Raspberry PI kubernetes cluster</title>
@@ -90,9 +90,16 @@
 
     <!-- main menu -->
     <nav>
-        <ul class="vertical-menu scrollspy">
+        <ul class="vertical-menu">
             <li class="active"><a href="/#home"><i class="icon-home"></i></a></li>
             <li><a href="/#contact"><i class="icon-bubbles"></i></a></li>
+            <li sec:authorize="!isFullyAuthenticated()">
+                <a href="/login"><i class="icon-login"></i></a>
+            </li>
+            <li sec:authorize="isFullyAuthenticated()">
+                <a class="submit-logout"><i class="icon-logout"></i></a>
+                <form type="hidden" id="logoutForm" th:action="@{/logout}" method="POST"></form>
+            </li>
         </ul>
     </nav>
 
@@ -121,7 +128,7 @@
 
 <!-- SCRIPTS -->
 <th:block th:fragment="scripts">
-<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery-3.6.1.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/jquery.counterup.min.js"></script>

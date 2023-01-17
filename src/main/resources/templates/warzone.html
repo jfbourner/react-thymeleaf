@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="standard-webpage :: head"/>
+<head th:replace="~{standard-webpage :: head}"/>
+<div id="preloader" th:replace="~{standard-webpage :: preloader}"/>
+<header th:replace="~{standard-webpage :: mobile-header}"/>
+<header th:replace="~{standard-webpage :: desktop-header}"/>
 <body>
-<div id="preloader" th:replace="standard-webpage :: preloader"/>
-<header th:replace="standard-webpage :: mobile-header"/>
-<header th:replace="standard-webpage :: desktop-header"/>
 <!-- main layout -->
 <main class="content-2">
 
     <!-- section page -->
     <section-webpage id="page">
-        <div id="cont" class="rounded bg-white shadow-dark padding-30">
+        <div class="rounded bg-white shadow-dark padding-30" id="cont">
             <h2 class="section-title wow fadeInUp" style="margin:0px">Warzone 2 stats</h2>
             <p></p>
-            <p>Welcome to the backend! But no, seriously, this page explains how this website was created and the components used. Enjoy :)</p>
-            <h3>My mission</h3>
+            <p>Enter your playstation username and return your stats back</p>
+            <br>
+            <div class="row">
+                <div class="col-md-4 mt-5">
+                    <form class="form-inline" method="get" th:action="@{/warzoneCombatHistoryWithDate}"
+                          th:object="${warzoneRequest}">
+
+                        <div class="form-group" data-error="Username is required.">
+                            <label for="username">UserName:</label>
+                            <input autocomplete="off" class="form-control" id="username" placeholder="Username"
+                                   th:field="*{username}" type="text"/>
+                            <div class="text-danger" th:if="${#fields.hasErrors('username')}">
+                                <p class="error-message" th:errors="*{username}"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="platform">Platform:</label>
+                            <textarea autocomplete="off" class="form-control" id="platform" placeholder="Platform" rows="2"
+                                      th:field="*{platform}" type="text"></textarea>
+                            <div class="text-danger" th:if="${#fields.hasErrors('platform')}">
+                                <p class="error-message" th:errors="*{platform}"></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateFrom">Date From:</label>
+                            <input id="dateFrom" th:field="${warzoneRequest.dateFrom}" type="datetime-local"/>
+                            <div class="text-danger" th:if="${#fields.hasErrors('dateFrom')}">
+                                <p class="error-message" th:errors="*{dateFrom}"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dateTo">Date To:</label>
+                            <input id="dateTo" th:field="${warzoneRequest.dateTo}" type="datetime-local"/>
+                        </div>
+                        <div class="text-danger" th:if="${#fields.hasErrors('dateTo')}">
+                            <p class="error-message" th:errors="*{dateTo}"></p>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+
+                </div>
+            </div>
+            <figure>
+                <figcaption>Your code title</figcaption>
+                <pre>
+                    <code>
+                    public static void main(String[] args) {}
+                    </code>
+                </pre>
+            </figure>
+            <div th:text="${data}"></div>
         </div>
     </section-webpage>
 
@@ -26,7 +77,7 @@
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- SCRIPTS -->
-<th:block th:include="standard-webpage :: scripts"></th:block>
+<th:block th:insert="~{standard-webpage :: scripts}"></th:block>
 
 </body>
 </html>

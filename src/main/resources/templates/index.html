@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="en-US" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/extras/spring-security6">
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <title>Jack Bourner</title>
     <meta content="Jack Bourner website" name="description">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="_csrf" th:content="${_csrf.token}"/>
-    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+   <!-- <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>-->
     <link href="images/jb.ico" rel="shortcut icon" type="image/x-icon">
 
     <!-- STYLESHEETS -->
@@ -103,8 +103,14 @@
         </ul>
         <ul class="vertical-menu" style="margin-top: 0px;">
             <li sec:authorize="!isFullyAuthenticated()"><a href="/login"><i class="icon-login"></i>Login</a></li>
-            <li sec:authorize="isFullyAuthenticated()"><a href="/logout"><i class="icon-logout"></i>Log out</a></li>
+            <li sec:authorize="isFullyAuthenticated()">
+                <!-- jquery in static/js/custom.js to submit on click -->
+                <a class="submit-logout"><i class="icon-logout"></i>Log out</a>
+                <form type="hidden" id="logoutForm" th:action="@{/logout}" method="POST">
+                </form>
+            </li>
         </ul>
+
 
     </nav>
     <!-- site footer -->
@@ -398,7 +404,7 @@
 
                 <div class="col-md-4">
                     <!-- service box -->
-                    <a href="/raspberrypi.html	">
+                    <a href="/raspberrypi	">
                         <div class="service-box rounded data-background padding-30 text-center text-light shadow-blue"
                              data-color="#6C6CE5">
                             <img alt="Raspberry pi logo" src="images/jackbourner/raspberry-pi-logo.png"/>

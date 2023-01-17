@@ -17,7 +17,8 @@ $(function () {
 
     // when the form is submitted
     $('#contact-form').on('submit', function (e) {
-
+        var token = $('#_csrf').attr('content');
+        var header = $('#_csrf_header').attr('content');
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
             var url = "/contactForm";

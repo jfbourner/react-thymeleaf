@@ -27,3 +27,21 @@ mvn clean package k8s:build k8s:resource k8s:apply -B -ntp -P dev
 ```
 mvn clean package jib:build k8s:build k8s:resource k8s:apply -B -ntp -P dev
 ```
+## Native compile 
+When compiling the project using the native build tools, it take a long time. It is recommended to compile  
+locally first(Running on the JVM using AOT bytecode), and  run it locally, before building the full image 
+
+### Native compile locally 
+```
+mvn -Pnative -DskipTests package
+java -Dspring.aot.enabled=true -jar ./target/react-thymeleaf-1.0.0.jar
+```
+
+### Native compile using buildpacks 
+```
+mvn clean -Pnative -DskipTests spring-boot:build-image
+```
+### Native executable 
+```
+mvn clean -Pnative native:image 
+```

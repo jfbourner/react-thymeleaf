@@ -1,5 +1,10 @@
 package com.jackbourner.reactthymeleaf.mail;
 
+import jakarta.activation.CommandMap;
+import jakarta.activation.MailcapCommandMap;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -8,28 +13,21 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
+import java.nio.charset.StandardCharsets;
 
 @Service
 public class EmailService {
 
     @Value("${spring.mail.username}")
     String toEmail;
-
-    private final TemplateEngine templateEngine;
-
-    private final JavaMailSender javaMailSender;
-
-    public EmailService(TemplateEngine templateEngine, JavaMailSender javaMailSender) {
-        this.templateEngine = templateEngine;
-        this.javaMailSender = javaMailSender;
-    }
+    @Autowired private TemplateEngine templateEngine;
+    @Autowired private JavaMailSender javaMailSender;
 
     public String sendMail(ContactForm contactForm) throws MessagingException {
-
+    try {
+        MailcapCommandMap mc = (MailcapCommandMap) CommandMap.getDefaultCommandMap();
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
+        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, StandardCharsets.UTF_8.name());
 
         Context context = new Context();
         context.setVariable("introduction", "Welcome");
@@ -40,8 +38,7 @@ public class EmailService {
         helper.setSubject("Hi " + contactForm.name);
         helper.setText(process, true);
         helper.setTo(contactForm.email);
-        helper.addInline("logo",new ClassPathResource("static/images/jackb.png"),"image/png");
-
+        helper.addInline("logo", new ClassPathResource("static/images/jackb.png"), "image/png");
         javaMailSender.send(mimeMessage);
 
         MimeMessage mimeMessage2 = javaMailSender.createMimeMessage();
@@ -50,7 +47,9 @@ public class EmailService {
         helper2.setText(contactForm.getEmail() + ": " + contactForm.message);
         helper2.setTo(toEmail);
         javaMailSender.send(mimeMessage2);
-
+    }catch (Exception e){
+        System.out.println(e);
+    }
         return "Sent";
     }
 }

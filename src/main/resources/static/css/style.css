@@ -2452,3 +2452,22 @@ body {
   margin: auto;
   padding: 20px;
 }
+
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+li {
+    margin-left: 1em;
+}
+
+.fabutton {
+  background: none;
+  padding: 0px;
+  border: none;
+}
+
+.submit-logout {
+    cursor: pointer;
+}

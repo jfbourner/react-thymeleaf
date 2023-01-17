@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="https://www.thymeleaf.org">
-<head th:replace="standard-webpage :: head"/>
+<head th:replace="~{standard-webpage :: head}"/>
 <body>
-<header th:replace="standard-webpage :: mobile-header"/>
-<header th:replace="standard-webpage :: desktop-header"/>
+<header th:replace="~{standard-webpage :: mobile-header}"/>
+<header th:replace="~{standard-webpage :: desktop-header}"/>
 <<!-- main layout -->
 <main class="content-2">
 
@@ -37,14 +37,14 @@
                                required="required" type="password">
                         <div class="help-block with-errors"></div>
                     </div>
-                    <button class="btn btn-default" id="submit" name="submit" type="submit" value="Sign In">Sign in
-                    </button>
+                    <button class="btn btn-default" id="submit" name="submit" type="submit" value="Sign In">Sign in</button>
+                    <a style="float: right;" th:href="@{/registration}">Register here</a>
                 </form>
             </div>
         </div>
     </section-webpage>
 </main>
 <!-- SCRIPTS -->
-<th:block th:include="standard-webpage :: scripts"></th:block>
+<th:block th:insert="~{standard-webpage :: scripts}"></th:block>
 </body>
 </html>

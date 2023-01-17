@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6" xmlns:th="http://www.thymeleaf.org">
 <head/>
 <body>
 <div th:fragment="loginLogout">
     <div sec:authorize="#{isAuthenticated()}">
-        <a th:href="@{/logout}">Log out</a>
+        <form th:action="@{/logout}" method="POST">
+            <button type="submit" class="fabutton">
+                <a href="#;"><i class="icon-logout"></i></a>
+            </button>
+        </form>
     </div>
     <div sec:authorize="#{isAnonymous()}">
         <a th:href="@{/login}">Log in</a>

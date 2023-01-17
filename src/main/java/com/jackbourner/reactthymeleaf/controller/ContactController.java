@@ -2,14 +2,15 @@ package com.jackbourner.reactthymeleaf.controller;
 
 import com.jackbourner.reactthymeleaf.mail.ContactForm;
 import com.jackbourner.reactthymeleaf.mail.EmailService;
-import lombok.extern.log4j.Log4j2;
+import jakarta.mail.MessagingException;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import javax.mail.MessagingException;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Log4j2
+@Log
 @SuppressWarnings("unused")
 public class ContactController {
 
@@ -18,7 +19,7 @@ public class ContactController {
 
     @PostMapping("/contactForm")
     public ContactResponse contactFormSubmit(@ModelAttribute ContactForm contactForm) {
-        log.info(contactForm);
+        log.info(contactForm.toString());
         try {
             emailService.sendMail(contactForm);
         }catch (MessagingException | RuntimeException e) {

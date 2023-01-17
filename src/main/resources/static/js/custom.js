@@ -391,3 +391,10 @@ $(function(){
     });
 
 });
+
+ $(document).ready(function() {
+     $('.submit-logout').click(function() {
+        $('#logoutForm').submit();
+     });
+
+});
