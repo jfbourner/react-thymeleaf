@@ -4,18 +4,16 @@ on: [push]
 
 jobs:
   job1:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Maven build + image build and publish
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: Set up graalvm
-        uses: graalvm/setup-graalvm@v1
+        uses: uraimo/run-on-arch-action@v2
         with:
           arch: aarch64
+          distro: ubuntu20.04
           version: 'latest'
-          java-version: '17'
-          components: 'native-image'
           cache: 'maven'
           version-minor: true
       - name: Login to GitHub Container Registry
