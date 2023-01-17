@@ -126,6 +126,7 @@
                                 --initialize-at-run-time=io.netty
                             </BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                         </env>
+                        <name>${image.name}:${image.tag}</name>
                     </image>
                 </configuration>
             </plugin>
@@ -301,7 +302,7 @@
                                         --initialize-at-run-time=io.netty
                                     </BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                                 </env>
-                                <imageName>${image.name}:${image.tag}</imageName>
+                                <name>${image.name}:${image.tag}</name>
                                 <!--<name>${project.artifactId}:${project.version}-arm64:${image.tag}</name>-->
                                 <publish>true</publish>
 
