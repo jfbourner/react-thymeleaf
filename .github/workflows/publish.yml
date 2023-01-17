@@ -12,6 +12,7 @@ jobs:
       - name: Set up graalvm
         uses: graalvm/setup-graalvm@v1
         with:
+          arch: aarch64
           version: 'latest'
           java-version: '17'
           components: 'native-image'
