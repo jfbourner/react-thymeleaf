@@ -294,7 +294,7 @@
                                 </exclude>
                             </excludes>
                             <image>
-                                <builder>DaShaun/builder:tiny</builder>
+                                <builder>dashaun/builder:tiny</builder>
                                 <env>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
                                     <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic --initialize-at-run-time=io.netty</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
