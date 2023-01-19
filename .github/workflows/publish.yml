@@ -27,6 +27,7 @@ jobs:
           mvn clean -B -ntp -Pnative-arm64,native spring-boot:build-image
         env:
           IMAGE_TAG: latest
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
   job2:
     needs: job1

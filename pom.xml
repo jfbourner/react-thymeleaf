@@ -293,14 +293,19 @@
                                     <artifactId>lombok</artifactId>
                                 </exclude>
                             </excludes>
+                            <docker>
+                                <publishRegistry>
+                                    <username>jfbourner</username>
+                                    <token>${env.GHCR_TOKEN}</token>
+                                </publishRegistry>
+                            </docker>
                             <image>
-                                <builder>dashaun/builder:tiny</builder>
                                 <env>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
                                     <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic --initialize-at-run-time=io.netty</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                                 </env>
+                                <builder>dashaun/builder:tiny</builder>
                                 <name>${image.name}:${image.tag}</name>
-                                <!--<name>${project.artifactId}:${project.version}-arm64:${image.tag}</name>-->
                                 <publish>true</publish>
                             </image>
                         </configuration>
