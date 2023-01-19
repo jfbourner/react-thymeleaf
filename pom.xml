@@ -25,7 +25,7 @@
         <image.tag>local</image.tag>
         <ingress.secret>dev-tls</ingress.secret>
         <host.name>localhost</host.name>
-        <!--		<thymeleaf.version>3.1.0.M1</thymeleaf.version>-->
+        <!--<thymeleaf.version>3.1.0.M1</thymeleaf.version>-->
     </properties>
     <dependencies>
         <dependency>
@@ -108,10 +108,10 @@
 
     <build>
         <plugins>
-<!--            <plugin>
+            <plugin>
                 <groupId>org.graalvm.buildtools</groupId>
                 <artifactId>native-maven-plugin</artifactId>
-            </plugin>-->
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -125,12 +125,8 @@
                     <image>
                         <builder>paketobuildpacks/builder:tiny</builder>
                         <env>
-                            <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
-                                --initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic
-                                --initialize-at-run-time=io.netty
-                            </BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
+                            <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic --initialize-at-run-time=io.netty</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                         </env>
-                        <name>${image.name}:${image.tag}</name>
                     </image>
                 </configuration>
             </plugin>
@@ -298,13 +294,10 @@
                                 </exclude>
                             </excludes>
                             <image>
-                                <builder>paketobuildpacks/builder:tiny</builder>
+                                <builder>DaShaun/builder:tiny</builder>
                                 <env>
                                     <BP_NATIVE_IMAGE>true</BP_NATIVE_IMAGE>
-                                    <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
-                                        --initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic
-                                        --initialize-at-run-time=io.netty
-                                    </BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
+                                    <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--initialize-at-build-time=org.slf4j,ch.qos.logback.core,ch.qos.logback.classic --initialize-at-run-time=io.netty</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
                                 </env>
                                 <name>${image.name}:${image.tag}</name>
                                 <!--<name>${project.artifactId}:${project.version}-arm64:${image.tag}</name>-->

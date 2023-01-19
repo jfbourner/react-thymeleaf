@@ -19,7 +19,7 @@ public class WarzoneController {
     WarzoneService warzoneService;
 
     @GetMapping("/warzoneCombatHistoryWithDate")
-    public String warzoneCombatHistoryWithDate(@Valid WarzoneRequest warzoneRequest, BindingResult result,  Model model) {
+    public String warzoneCombatHistoryWithDate(@Valid WarzoneRequest warzoneRequest, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "warzone";
         }
