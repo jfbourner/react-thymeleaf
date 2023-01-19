@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
-          mvn clean -B -ntp -Pnative-arm64,native spring-boot:build-image
+          ls
         env:
           IMAGE_TAG: latest
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -54,7 +54,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Development deployment'
         run: |
-          mvn -B -ntp -P dev dockerfile:tag
+          IMAGE_NAME=$(mvn help:evaluate -Dexpression=image.name -q -DforceStdout)
+          docker tag $IMAGE_NAME IMAGE_NAME:$IMAGE_TAG
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
@@ -94,7 +95,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Production deployment'
         run: |
-          mvn -B -ntp -P prod dockerfile:tag
+          IMAGE_NAME=$(mvn help:evaluate -Dexpression=image.name -q -DforceStdout)
+          docker tag $IMAGE_NAME IMAGE_NAME:$IMAGE_TAG
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster prod --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
