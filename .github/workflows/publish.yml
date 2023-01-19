@@ -55,7 +55,7 @@ jobs:
       - name: 'Development deployment'
         run: |
           export IMAGE_NAME=$(mvn help:evaluate -Dexpression=image.name -q -DforceStdout)
-          docker tag $IMAGE_NAME $IMAGE_NAME:$IMAGE_TAG
+          docker tag $IMAGE_NAME:local $IMAGE_NAME:$IMAGE_TAG
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster dev --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
@@ -96,7 +96,7 @@ jobs:
       - name: 'Production deployment'
         run: |
           export IMAGE_NAME=$(mvn help:evaluate -Dexpression=image.name -q -DforceStdout)
-          docker tag $IMAGE_NAME $IMAGE_NAME:$IMAGE_TAG
+          docker tag $IMAGE_NAME:dev $IMAGE_NAME:$IMAGE_TAG
           echo $KUBERNETES_PK | base64 --decode > private.key
           echo $KUBERNETES_CRT | base64 --decode > github.crt
           kubectl config set-cluster prod --server=https://jackbourner.co.uk:6443 --insecure-skip-tls-verify=true
