@@ -296,7 +296,7 @@
                             <docker>
                                 <publishRegistry>
                                     <username>jfbourner</username>
-                                    <token>${env.GHCR_TOKEN}</token>
+                                    <password>${env.GHCR_TOKEN}</password>
                                 </publishRegistry>
                             </docker>
                             <image>
