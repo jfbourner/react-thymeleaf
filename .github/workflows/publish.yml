@@ -4,7 +4,7 @@ on: [push,workflow_dispatch]
 
 jobs:
   job1:
-    runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204-arm
     name: Maven build + image build and publish
     steps:
       - name: Checkout
