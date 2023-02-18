@@ -4,8 +4,8 @@ spec:
       containers:
         - env:
             - name: MAIL_PASSWORD
-              value: ${MAIL_PASSWORD}
+              value: ${mail.password}
             - name: RECAPTCHA_SITE
-              value: ${RECAPTCHA_SITE}
+              value: ${recaptcha.site}
             - name: RECAPTCHA_SECRET
-              value: ${RECAPTCHA_SECRET}
+              value: ${recaptcha.secret}

@@ -14,6 +14,9 @@
     <name>react-thymeleaf</name>
     <description>CV website for Jack Bourner</description>
     <properties>
+        <mail.password>${env.MAIL_PASSWORD}</mail.password>
+        <recaptcha.site>${env.RECAPTCHA_SITE}</recaptcha.site>
+        <recaptcha.secret>${env.RECAPTCHA_SECRET}</recaptcha.secret>
         <java.version>17</java.version>
         <service.port>8080</service.port>
         <image.name>ghcr.io/jfbourner/${project.name}-arm64</image.name>
