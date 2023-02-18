@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Package Jar. Re-package layered Jar. Build Image. Push to GHE.
         run: |
-          mvn clean -B -ntp -Pnative-arm64,native spring-boot:build-image
+            mvn clean -B -ntp -Pnative-arm64,native spring-boot:build-image
         env:
           IMAGE_TAG: latest
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
