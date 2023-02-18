@@ -1,0 +1,26 @@
+
+.warzone .form-group {
+    margin-right:10px;
+}
+
+.warzone .form-control {
+}
+
+.warzone .form-group:last-child {
+    width: 20%
+}
+.select-wrapper select:invalid {
+  color: #afabca;
+  /*Change color of "placeholder" text in select box*/
+}
+
+@media (max-width: 574px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

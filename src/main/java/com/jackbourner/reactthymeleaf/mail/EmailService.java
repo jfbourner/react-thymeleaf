@@ -35,16 +35,16 @@ public class EmailService {
         context.setVariable("logo", "logo");
         String process = templateEngine.process("mail/email-confirmation", context);
 
-        helper.setSubject("Hi " + contactForm.name);
+        helper.setSubject("Hi " + contactForm.getName());
         helper.setText(process, true);
-        helper.setTo(contactForm.email);
+        helper.setTo(contactForm.getEmail());
         helper.addInline("logo", new ClassPathResource("static/images/jackb.png"), "image/png");
         javaMailSender.send(mimeMessage);
 
         MimeMessage mimeMessage2 = javaMailSender.createMimeMessage();
         MimeMessageHelper helper2 = new MimeMessageHelper(mimeMessage2, true, "UTF-8");
         helper2.setSubject(contactForm.getSubject());
-        helper2.setText(contactForm.getEmail() + ": " + contactForm.message);
+        helper2.setText(contactForm.getEmail() + ": " + contactForm.getMessage());
         helper2.setTo(toEmail);
         javaMailSender.send(mimeMessage2);
     }catch (Exception e){

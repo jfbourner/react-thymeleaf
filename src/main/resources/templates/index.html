@@ -1002,10 +1002,13 @@
                                 </div>
                             </div>
                         </div>
-
-                        <button class="btn btn-default" id="submit" name="submit" type="submit" value="Submit">Send
-                            Message
-                        </button><!-- Send Button -->
+                        <div id='recaptcha' class="g-recaptcha"
+                             data-sitekey="6LfLBXIkAAAAAJHbXKuArbhwcL2yg0akiVyQsMCI"
+                             data-callback="onComplete"
+                             data-action="contact"
+                             data-size="invisible"></div>
+                        <button type="submit" id="contactBtn" class="btn btn-default">Send Message</button>
+                        <div class="loader" style="display:none"></div>
 
                     </form>
                     <!-- Contact Form end -->
@@ -1025,23 +1028,11 @@
 <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
 <!-- SCRIPTS -->
-<script src="/js/jquery-1.12.3.min.js"></script>
-<script src="/js/jquery.easing.min.js"></script>
-<script src="/js/jquery.waypoints.min.js"></script>
-<script src="/js/jquery.counterup.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/isotope.pkgd.min.js"></script>
-<script src="/js/infinite-scroll.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/slick.min.js"></script>
-<script src="/js/contact.js"></script>
-<script src="/js/validator.js"></script>
-<script src="/js/wow.min.js"></script>
-<script src="/js/morphext.min.js"></script>
-<script src="/js/parallax.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<script src="/js/custom.js"></script>
+<th:block th:insert="~{standard-webpage :: scripts}"></th:block>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+
+ </script>
 <script src="https://jthemes.net/themes/wp/bolby/bolby9/wp-content/themes/bolby/js/wow.min.js?ver=5.9.4" id="wow-js-js"></script>
 
 </body>

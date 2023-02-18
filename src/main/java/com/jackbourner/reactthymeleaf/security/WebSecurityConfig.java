@@ -1,4 +1,4 @@
-package com.jackbourner.reactthymeleaf.config;
+package com.jackbourner.reactthymeleaf.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

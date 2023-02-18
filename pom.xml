@@ -65,6 +65,12 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.passay</groupId>
             <artifactId>passay</artifactId>
             <version>1.6.2</version>
@@ -157,6 +163,10 @@
                     </images>
                     <enricher>
                         <config>
+                            <env>
+                                <hello>jack</hello>
+                                <CATALINA_OPTS>testr</CATALINA_OPTS>
+                            </env>
                             <jkube-image>
                                 <pullPolicy>Always</pullPolicy>
                             </jkube-image>

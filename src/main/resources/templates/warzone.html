@@ -4,6 +4,7 @@
 <div id="preloader" th:replace="~{standard-webpage :: preloader}"/>
 <header th:replace="~{standard-webpage :: mobile-header}"/>
 <header th:replace="~{standard-webpage :: desktop-header}"/>
+<link rel="stylesheet" href="css/responsiveForm.css" type="text/css" media="all">
 <body>
 <!-- main layout -->
 <main class="content-2">
@@ -15,56 +16,47 @@
             <p></p>
             <p>Enter your playstation username and return your stats back</p>
             <br>
-            <div class="row">
-                <div class="col-md-4 mt-5">
-                    <form class="form-inline" method="get" th:action="@{/warzoneCombatHistoryWithDate}"
-                          th:object="${warzoneRequest}">
-
+            <div>
+                    <form class="form-inline warzone" method="POST" th:action="@{/warzone}" th:object="${warzoneRequest}">
                         <div class="form-group" data-error="Username is required.">
-                            <label for="username">UserName:</label>
-                            <input autocomplete="off" class="form-control" id="username" placeholder="Username"
-                                   th:field="*{username}" type="text"/>
+<!--                            <label for="username">UserName:</label>-->
+                            <input class="form-control"
+                                   placeholder="Username"
+                                   th:field="*{username}"
+                                   type="text"/>
                             <div class="text-danger" th:if="${#fields.hasErrors('username')}">
                                 <p class="error-message" th:errors="*{username}"></p>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="platform">Platform:</label>
-                            <textarea autocomplete="off" class="form-control" id="platform" placeholder="Platform" rows="2"
-                                      th:field="*{platform}" type="text"></textarea>
-                            <div class="text-danger" th:if="${#fields.hasErrors('platform')}">
-                                <p class="error-message" th:errors="*{platform}"></p>
-                            </div>
+                        <div class="form-group select-wrapper">
+<!--                            <label for="platform">Select platform</label>-->
+                            <select required class="form-control selectpicker" id="platform" name="platform"  >
+                                <option value="" selected disabled hidden>Platform</option>
+                                <option th:each="platform : ${platformList}" th:value="${platform}" th:text="${platform}"></option>
+                            </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="dateFrom">Date From:</label>
-                            <input id="dateFrom" th:field="${warzoneRequest.dateFrom}" type="datetime-local"/>
+                           <!-- <label for="dateFrom">Date From:</label>-->
+                            <input class="form-control" style="min-width: 253px" th:field="*{dateFrom}" onfocus="(this.type='datetime-local')" placeholder="Date from"/>
                             <div class="text-danger" th:if="${#fields.hasErrors('dateFrom')}">
                                 <p class="error-message" th:errors="*{dateFrom}"></p>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="dateTo">Date To:</label>
-                            <input id="dateTo" th:field="${warzoneRequest.dateTo}" type="datetime-local"/>
+<!--                            <label for="dateTo">Date To:</label>-->
+                            <input class="form-control" style="min-width: 253px" th:field="*{dateTo}" onfocus="(this.type='datetime-local')" placeholder="Date to"/>
                         </div>
                         <div class="text-danger" th:if="${#fields.hasErrors('dateTo')}">
                             <p class="error-message" th:errors="*{dateTo}"></p>
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <div class="form-group">
+                            <button class="btn btn-default" type="submit">Submit</button>
+                        </div>
                     </form>
 
-                </div>
             </div>
-            <figure>
-                <figcaption>Your code title</figcaption>
-                <pre>
-                    <code>
-                    public static void main(String[] args) {}
-                    </code>
-                </pre>
-            </figure>
             <div th:text="${data}"></div>
         </div>
     </section-webpage>

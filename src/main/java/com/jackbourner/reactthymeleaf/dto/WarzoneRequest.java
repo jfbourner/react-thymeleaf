@@ -3,28 +3,32 @@ package com.jackbourner.reactthymeleaf.dto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class WarzoneRequest {
 
     @NotNull
     @NotEmpty
     @Size(min = 5, max = 30)
-    String username;
+    private String username;
 
     @NotNull
     @NotEmpty
-    String platform;
+    private String platform;
 
     @NotNull
     @DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm")
-    LocalDateTime dateFrom;
+    private LocalDateTime dateFrom;
 
     @NotNull
     @DateTimeFormat(pattern="yyyy-MM-dd'T'HH:mm")
-    LocalDateTime dateTo;
+    private LocalDateTime dateTo;
 }

@@ -2471,3 +2471,13 @@ li {
 .submit-logout {
     cursor: pointer;
 }
+
+/* Used by the index.html to display loading system when an  email is sent*/
+.loader {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url('../images/ajax-loader.gif') no-repeat center center rgba(0,0,0,0);
+}

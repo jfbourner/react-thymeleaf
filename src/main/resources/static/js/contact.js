@@ -1,32 +1,24 @@
-/*var button = document.getElementById("submit");
-button.addEventListener("click", function(event){
-    console.info("test 0");
-   alert(event.target);
-});*/
-$(function () {
 
 
-    "use strict";
-
-    // init the validator
-    // validator files are included in the download package
-    // otherwise download from http://1000hz.github.io/bootstrap-validator
-
-    $('#contact-form').validator();
+$("#contact-form").submit(function( event ) {
+    event.preventDefault();
+    grecaptcha.execute();
+});
 
 
-    // when the form is submitted
-    $('#contact-form').on('submit', function (e) {
-        var token = $('#_csrf').attr('content');
+function onComplete(token){
+    var fields = $('#contact-form').serialize();
+    var url = "/contactForm";
+    var req = '{"test":"test"}'
+    var token = $('#_csrf').attr('content');
         var header = $('#_csrf_header').attr('content');
-        // if the validator does not prevent form submit
-        if (!e.isDefaultPrevented()) {
-            var url = "/contactForm";
-            // POST values in the background the the script URL
-            $.ajax({
+        $.ajax({
                 type: "POST",
                 url: url,
-                data: $(this).serialize(),
+                data: fields,
+                beforeSend: function(){
+                    $(".loader").show();
+                },
                 success: function (data){
                     // data = JSON object that contact.php returns
 
@@ -43,9 +35,14 @@ $(function () {
                         // empty the form
                         $('#contact-form')[0].reset();
                     }
-                }
+                },
+                error: function (request, error) {
+                    console.log("Help");
+                    alert(" Can't do because: " + error);
+                },
+                complete:function(data){
+                    $(".loader").hide();
+                },
             });
             return false;
-        }
-    })
-});
+}
