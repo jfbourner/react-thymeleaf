@@ -69,6 +69,8 @@ jobs:
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
+          RECAPTCHA_SECRET: ${{ secrets.RECAPTCHA_SECRET }}
+          RECAPTCHA_SITE: ${{ secrets.RECAPTCHA_SITE }}
           INGRESS_SECRET: dev-tls
           IMAGE_TAG: 'dev'
           HOSTNAME: 'https://dev.jackbourner.co.uk'
@@ -112,6 +114,8 @@ jobs:
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
           KUBERNETES_CRT: ${{ secrets.KUBERNETES_CRT }}
           KUBERNETES_PK: ${{ secrets.KUBERNETES_PK }}
+          RECAPTCHA_SECRET: ${{ secrets.RECAPTCHA_SECRET }}
+          RECAPTCHA_SITE: ${{ secrets.RECAPTCHA_SITE }}
           INGRESS_SECRET: echo-tls
           IMAGE_TAG: prod
           HOSTNAME: 'jackbourner.co.uk'

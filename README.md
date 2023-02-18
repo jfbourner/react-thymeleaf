@@ -3,7 +3,9 @@
 ## Set environment variables
 Generated here - [Link](https://myaccount.google.com/apppasswords)
 ```
-MAIL_PASSWORD: test 
+MAIL_PASSWORD: test
+RECAPTCHA_SITE: ABCDE1234
+RECAPTCHA_SECRET: 1234ABCD
 ```
 
 ## Building the application into runnable JAR
