@@ -4,6 +4,7 @@ import com.jackbourner.reactthymeleaf.config.CaptchaSettings;
 import com.jackbourner.reactthymeleaf.model.RecaptchaResponse;
 import com.jackbourner.reactthymeleaf.security.ReCaptchaInvalidException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -17,6 +18,7 @@ import java.util.Objects;
 
 @Service
 @Slf4j
+
 public class RecaptchaService implements IReCaptchaService {
     @Autowired
     private CaptchaSettings captchaSettings;
@@ -25,6 +27,7 @@ public class RecaptchaService implements IReCaptchaService {
     private RestTemplate restTemplate;
 
     @Override
+    @RegisterReflectionForBinding(RecaptchaResponse.class)
     public float processResponse(String token) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
@@ -34,8 +37,14 @@ public class RecaptchaService implements IReCaptchaService {
         map.add("response",token);
 
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map,headers);
-
-        RecaptchaResponse response = restTemplate.postForObject(captchaSettings.url(),request, RecaptchaResponse.class);
+        RecaptchaResponse response;
+        log.debug("Request {}",request);
+        try {
+            response = restTemplate.postForObject(captchaSettings.url(), request, RecaptchaResponse.class);
+        }catch (Exception rce){
+            log.error("Error calling recaptcha", rce);
+            response = new RecaptchaResponse(false, 0.0f, "","","");
+        }
 
         log.info("Response: {}",response);
 

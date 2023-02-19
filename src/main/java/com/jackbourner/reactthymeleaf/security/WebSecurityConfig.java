@@ -25,7 +25,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(toH2Console()).permitAll()
                         .requestMatchers("/css/**", "/files/**", "/fonts/**", "/form/**", "/images/**", "/js/**", "/webfonts/**").permitAll()
-                        .requestMatchers("/", "/index", "/login", "/raspberrypi", "/warzone", "/warzoneCombatHistoryWithDate", "/contactForm", "/registration", "/logout").permitAll()
+                        .requestMatchers("/", "/index", "/login", "/raspberrypi", "/warzone", "/warzoneCombatHistoryWithDate", "/contactForm", "/registration", "/logout", "/actuator/**").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/user/**").hasRole("USER")
                         .anyRequest().authenticated())

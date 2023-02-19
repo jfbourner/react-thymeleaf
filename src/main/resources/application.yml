@@ -52,6 +52,7 @@ google:
 logging:
   level:
     root: INFO
+    com.jackbourner.reactthymeleaf: INFO
     org:
       springframework:
         security: INFO
